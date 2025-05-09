@@ -1,0 +1,6 @@
+@VowelBonus.API_HostAddress = http://localhost:5208
+
+GET {{VowelBonus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

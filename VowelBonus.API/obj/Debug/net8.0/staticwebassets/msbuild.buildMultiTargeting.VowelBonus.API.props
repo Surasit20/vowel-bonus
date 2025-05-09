@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\VowelBonus.API.props" />
+</Project>

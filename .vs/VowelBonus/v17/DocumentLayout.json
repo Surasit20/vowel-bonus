@@ -1,0 +1,424 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|solutionrelative:vowelbonus.infrastructure\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\v1\\vowelbonusscorehistories\\commands\\createvowelbonusscorehistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\vowelbonusscorehistories\\commands\\createvowelbonusscorehistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.shared\\common\\constants\\baseconst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|solutionrelative:vowelbonus.shared\\common\\constants\\baseconst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\v1\\users\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\users\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.infrastructure\\persistence\\repositories\\vowelbonusscorehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|solutionrelative:vowelbonus.infrastructure\\persistence\\repositories\\vowelbonusscorehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C0D90C8-EA01-4E1A-825A-029A023707D7}|VowelBonus.Domain\\VowelBonus.Domain.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.domain\\interfaces\\ivowelbonusscorehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C0D90C8-EA01-4E1A-825A-029A023707D7}|VowelBonus.Domain\\VowelBonus.Domain.csproj|solutionrelative:vowelbonus.domain\\interfaces\\ivowelbonusscorehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\v1\\flows\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\flows\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.shared\\dtos\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|solutionrelative:vowelbonus.shared\\dtos\\users\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|solutionrelative:vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\v1\\flows\\profiles\\flowsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\flows\\profiles\\flowsprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9295B08F-233F-4F6D-BA3A-503A4FA1AF04}|VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj|solutionrelative:vowelbonus.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.api\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.api\\controllers\\v1\\flowscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\flowscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.api\\controllers\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|c:\\users\\blackpinker\\downloads\\fullstackcleanarchitecture-dot-net-main\\vowelbonus-main\\vowelbonus.application\\v1\\vowelbonusscorehistories\\profiles\\vowelbonusscorehistoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\vowelbonusscorehistories\\profiles\\vowelbonusscorehistoryprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 84,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseConst.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\Common\\Constants\\BaseConst.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Shared\\Common\\Constants\\BaseConst.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\Common\\Constants\\BaseConst.cs",
+              "RelativeToolTip": "VowelBonus.Shared\\Common\\Constants\\BaseConst.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswBAAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:48:14.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Users\\Commands\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Users\\Commands\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Users\\Commands\\CreateUserCommand.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\Users\\Commands\\CreateUserCommand.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:46:39.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IVowelBonusScoreHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
+              "RelativeToolTip": "VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:38:46.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VowelBonusScoreHistoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
+              "RelativeToolTip": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:37:25.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\DTOs\\Users\\UserDto.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Shared\\DTOs\\Users\\UserDto.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\DTOs\\Users\\UserDto.cs",
+              "RelativeToolTip": "VowelBonus.Shared\\DTOs\\Users\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:31:14.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "VowelBonus.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:33:04.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\GlobalUsings.cs",
+              "RelativeToolTip": "VowelBonus.Application\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:33:02.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "VowelBonus.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:32:53.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\GlobalUsings.cs",
+              "RelativeToolTip": "VowelBonus.API\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:32:37.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FlowsProfile.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Flows\\Profiles\\FlowsProfile.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Flows\\Profiles\\FlowsProfile.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Flows\\Profiles\\FlowsProfile.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\Flows\\Profiles\\FlowsProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:31:26.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Flows\\Commands\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Flows\\Commands\\LoginCommand.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\Flows\\Commands\\LoginCommand.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\Flows\\Commands\\LoginCommand.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowCIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:29:56.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VowelBonusScoreHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
+              "RelativeToolTip": "VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:29:25.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "VowelBonus.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAowGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:29:24.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FlowsController.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\FlowsController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\FlowsController.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\FlowsController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\FlowsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:26:56.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:26:35.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "VowelBonusScoreHistoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:25:58.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VowelBonusScoreHistoryProfile.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Profiles\\VowelBonusScoreHistoryProfile.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Profiles\\VowelBonusScoreHistoryProfile.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Profiles\\VowelBonusScoreHistoryProfile.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Profiles\\VowelBonusScoreHistoryProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:09:04.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateVowelBonusScoreHistoryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "ToolTip": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T13:08:55.609Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 32,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:140:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:143:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:144:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:145:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:147:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application.FunctionalTests",
+    "\\Application.FunctionalTests\\Employees",
+    "\\Application.FunctionalTests\\Employees\\Queries"
+  ],
+  "SelectedNode": "\\Application.FunctionalTests\\Employees\\Queries\\GetEmployeesTests.cs",
+  "PreviewInSolutionExplorer": false
+}

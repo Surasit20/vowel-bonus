@@ -1,0 +1,12 @@
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\bin\Debug\net8.0\VowelBonus.Domain.deps.json
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\bin\Debug\net8.0\VowelBonus.Domain.dll
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\bin\Debug\net8.0\VowelBonus.Domain.pdb
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.csproj.AssemblyReference.cache
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.AssemblyInfoInputs.cache
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.AssemblyInfo.cs
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.csproj.CoreCompileInputs.cache
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.dll
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\refint\VowelBonus.Domain.dll
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.pdb
+C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Domain\obj\Debug\net8.0\ref\VowelBonus.Domain.dll
