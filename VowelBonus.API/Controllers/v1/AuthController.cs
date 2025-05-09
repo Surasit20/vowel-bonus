@@ -4,16 +4,15 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using POS.Controllers.v1;
 using System.Reflection;
-using VowelBonus.Application.Users;
-using VowelBonus.Application.v1.Users;
+using VowelBonus.Application.Auth;
 
 namespace VowelBonus.API.Controllers.v1
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class FlowsController : BaseController
+    [Route("api/v1/[controller]")]
+    public class AuthController : BaseController
     {
-        public FlowsController(ISender sender) : base(sender)
+        public AuthController(ISender sender) : base(sender)
         {
         }
         [HttpPost("Login", Name = "Login")]

@@ -9,7 +9,7 @@ using VowelBonus.Application.v1.Users;
 namespace VowelBonus.API.Controllers.v1
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class UsersController : BaseController
     {
         public UsersController(ISender sender) : base(sender)

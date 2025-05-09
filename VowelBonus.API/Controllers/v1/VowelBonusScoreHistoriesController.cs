@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using POS.Controllers.v1;
 using System.Reflection;
-using VowelBonus.Application.Users;
-using VowelBonus.Application.v1.Users;
 using VowelBonus.Application.v1.VowelBonusScoreHistories;
 
 namespace VowelBonus.API.Controllers.v1
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class VowelBonusScoreHistoriesController : BaseController
     {
         public VowelBonusScoreHistoriesController(ISender sender) : base(sender)

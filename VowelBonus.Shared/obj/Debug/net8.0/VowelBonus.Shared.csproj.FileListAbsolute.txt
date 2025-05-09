@@ -9,3 +9,15 @@ C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonu
 C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Shared\obj\Debug\net8.0\refint\VowelBonus.Shared.dll
 C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.pdb
 C:\Users\BlackPinker\Downloads\FullStackCleanArchitecture-Dot-Net-main\VowelBonus-main\VowelBonus.Shared\obj\Debug\net8.0\ref\VowelBonus.Shared.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\bin\Debug\net8.0\VowelBonus.Shared.deps.json
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\bin\Debug\net8.0\VowelBonus.Shared.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\bin\Debug\net8.0\VowelBonus.Shared.pdb
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.AssemblyInfoInputs.cache
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.AssemblyInfo.cs
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.csproj.CoreCompileInputs.cache
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.sourcelink.json
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\refint\VowelBonus.Shared.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\VowelBonus.Shared.pdb
+D:\vowel-bonus\vowel-bonus\VowelBonus.Shared\obj\Debug\net8.0\ref\VowelBonus.Shared.dll

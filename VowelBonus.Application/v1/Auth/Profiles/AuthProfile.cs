@@ -1,8 +1,8 @@
-﻿namespace VowelBonus.Application.v1.VowelBonusScoreHistories.Profiles;
+﻿namespace VowelBonus.Application.v1.Auth.Profiles;
 
-public class FlowsProfile : Profile
+public class AuthProfile : Profile
 {
-    public FlowsProfile()
+    public AuthProfile()
     {
         CreateMap<User, UserDto>().ReverseMap();
         CreateMap<VowelBonusScoreHistory, VowelBonusScoreHistoryDto>().ReverseMap();

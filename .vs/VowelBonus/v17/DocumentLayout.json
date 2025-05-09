@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\vowel-bonus\\vowel-bonus\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.api\\controllers\\v1\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.api\\controllers\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\auth\\profiles\\authprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\auth\\profiles\\authprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\auth\\commands\\logincommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -31,7 +56,7 @@
         },
         {
           "DockedHeight": 32,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -108,6 +133,84 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\DependencyInjection.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "VowelBonus.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:47:42.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthProfile.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\Auth\\Profiles\\AuthProfile.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Auth\\Profiles\\AuthProfile.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\Auth\\Profiles\\AuthProfile.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\Auth\\Profiles\\AuthProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:44:02.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginCommand.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Auth\\Commands\\LoginCommand.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\Auth\\Commands\\LoginCommand.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\Auth\\Commands\\LoginCommand.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T15:43:55.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VowelBonusScoreHistoriesController.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T14:48:28.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T14:48:24.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\AuthController.cs",
+              "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\AuthController.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\AuthController.cs",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T14:48:03.208Z",
+              "EditorCaption": ""
             }
           ]
         }

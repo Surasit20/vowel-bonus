@@ -1,8 +1,6 @@
-﻿using MediatR;
-using VowelBonus.Application.v1.Users;
+﻿using VowelBonus.Application.v1.Users;
 
-
-namespace VowelBonus.Application.Users;
+namespace VowelBonus.Application.Auth;
 
 public record LoginCommand(LoginDto Args) : IRequest<Response<UserDto>>
 {

@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Flows/Login": {
+    "/api/v1/Auth/Login": {
       "post": {
         "tags": [
-          "Flows"
+          "Auth"
         ],
         "operationId": "Login",
         "requestBody": {
@@ -54,7 +54,7 @@
         }
       }
     },
-    "/api/Users/GetUsers": {
+    "/api/v1/Users/GetUsers": {
       "get": {
         "tags": [
           "Users"
@@ -84,7 +84,7 @@
         }
       }
     },
-    "/api/Users/GetUser/{id}": {
+    "/api/v1/Users/GetUser/{id}": {
       "get": {
         "tags": [
           "Users"
@@ -125,7 +125,7 @@
         }
       }
     },
-    "/api/Users/GetUserByUserName/{userName}": {
+    "/api/v1/Users/GetUserByUserName/{userName}": {
       "get": {
         "tags": [
           "Users"
@@ -165,7 +165,7 @@
         }
       }
     },
-    "/api/Users/CreateUser": {
+    "/api/v1/Users/CreateUser": {
       "post": {
         "tags": [
           "Users"
@@ -214,7 +214,7 @@
         }
       }
     },
-    "/api/Users/UpdateUser": {
+    "/api/v1/Users/UpdateUser": {
       "patch": {
         "tags": [
           "Users"
@@ -263,7 +263,7 @@
         }
       }
     },
-    "/api/Users/DeleteUser/{id}": {
+    "/api/v1/Users/DeleteUser/{id}": {
       "delete": {
         "tags": [
           "Users"
@@ -304,7 +304,7 @@
         }
       }
     },
-    "/api/VowelBonusScoreHistories/CreateVowelBonusScoreHistories": {
+    "/api/v1/VowelBonusScoreHistories/CreateVowelBonusScoreHistories": {
       "post": {
         "tags": [
           "VowelBonusScoreHistories"
