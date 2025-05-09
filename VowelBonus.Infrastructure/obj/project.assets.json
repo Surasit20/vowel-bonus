@@ -4662,11 +4662,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj",
+      "projectUniqueName": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj",
       "projectName": "VowelBonus.Infrastructure",
-      "projectPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj",
+      "projectPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Infrastructure\\VowelBonus.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\BlackPinker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Infrastructure\\obj\\",
+      "outputPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
@@ -4693,8 +4693,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\VowelBonus.Application.csproj": {
-              "projectPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Application\\VowelBonus.Application.csproj"
+            "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\VowelBonus.Application.csproj": {
+              "projectPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\VowelBonus.Application.csproj"
             }
           }
         }

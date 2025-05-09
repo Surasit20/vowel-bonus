@@ -128,11 +128,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Domain\\VowelBonus.Domain.csproj",
+      "projectUniqueName": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Domain\\VowelBonus.Domain.csproj",
       "projectName": "VowelBonus.Domain",
-      "projectPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Domain\\VowelBonus.Domain.csproj",
+      "projectPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Domain\\VowelBonus.Domain.csproj",
       "packagesPath": "C:\\Users\\BlackPinker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Domain\\obj\\",
+      "outputPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\VowelBonus.Shared.csproj",
+      "projectUniqueName": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\VowelBonus.Shared.csproj",
       "projectName": "VowelBonus.Shared",
-      "projectPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\VowelBonus.Shared.csproj",
+      "projectPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\VowelBonus.Shared.csproj",
       "packagesPath": "C:\\Users\\BlackPinker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.Shared\\obj\\",
+      "outputPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",

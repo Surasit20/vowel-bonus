@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iZgcaerEg8o=",
+  "dgSpecHash": "XrP8eo3bfyc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\BlackPinker\\Downloads\\FullStackCleanArchitecture-Dot-Net-main\\VowelBonus-main\\VowelBonus.API\\VowelBonus.API.csproj",
+  "projectFilePath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\VowelBonus.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\BlackPinker\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\BlackPinker\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
