@@ -1,4 +1,5 @@
 ﻿using VowelBonus.Application.v1.Users;
+using VowelBonus.Domain.Interfaces;
 
 namespace VowelBonus.Application.Auth;
 
@@ -10,11 +11,14 @@ public record LoginCommand(LoginDto Args) : IRequest<Response<UserDto>>
 public class LoginCommandHandler : IRequestHandler<LoginCommand, Response<UserDto>>
 {
     private readonly IUserRepository _userRepository;
+    private readonly IVowelBonusScoreHistoryRepository _vowelBonusScoreHistoryRepository;
     private readonly IMapper _mapper;
     private readonly IMediator _mediator;
-    public LoginCommandHandler(IUserRepository userRepository, IMapper mapper, IMediator mediator)
+
+    public LoginCommandHandler(IUserRepository userRepository, IVowelBonusScoreHistoryRepository vowelBonusScoreHistoryRepository, IMapper mapper, IMediator mediator)
     {
         _userRepository = userRepository;
+        _vowelBonusScoreHistoryRepository = vowelBonusScoreHistoryRepository;
         _mapper = mapper;
         _mediator = mediator;
     }
@@ -33,6 +37,7 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, Response<UserDt
                 if (user != null) 
                 {
                     var userDto = _mapper.Map<User, UserDto>(user);
+                    userDto.TotalPoint = await _vowelBonusScoreHistoryRepository.GetTotalPointByUserIdAsync(user.UserId);
                     return res.Success(userDto, BaseConst.SAVE_SUCCESS);
                 }
                 else

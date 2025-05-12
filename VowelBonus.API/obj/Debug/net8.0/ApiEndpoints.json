@@ -8,7 +8,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "login",
+        "Name": "loginDto",
         "Type": "VowelBonus.Shared.DTOs.LoginDto",
         "IsRequired": true
       }

@@ -1,0 +1,15 @@
+  <form (ngSubmit)="onSend()" #loginForm="ngForm" class="login-form">
+    <label for="word">Enter Your Word</label>
+    <input 
+      type="text" 
+      id="word" 
+      name="word" 
+      [(ngModel)]="word" 
+      required
+      placeholder="connext"
+    />
+
+    <button type="submit" [disabled]="!loginForm.valid">
+      Send
+    </button>
+  </form>

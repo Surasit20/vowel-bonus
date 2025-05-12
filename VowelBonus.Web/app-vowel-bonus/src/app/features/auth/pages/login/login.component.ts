@@ -12,7 +12,7 @@ import { SecureStorageService } from '@vowel-bonus-app/core/services/secure-stor
   imports: [FormsModule],
 })
 export class LoginComponent {
-  @Input() username!: string;
+  username!: string;
 
   constructor(
     private router: Router,
@@ -23,8 +23,9 @@ export class LoginComponent {
   onLogin() {
     this.authService.login(this.username).subscribe({
       next: (res) => {
+        console.log(res)
         if (res.succeeded) {
-          this.authService.gotoLoginPage();
+          this.authService.gotoHomePage();
         }
       },
       error: (error) => {

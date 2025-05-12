@@ -27,6 +27,7 @@ public class CreateVowelBonusScoreHistoryHandler : IRequestHandler<CreateVowelBo
             await _vowelBonusScoreHistoryRepository.AddAsync(vowelBonusScoreHistory);
 
             var vowelBonusScoreHistoryDto = _mapper.Map<VowelBonusScoreHistory,VowelBonusScoreHistoryDto>(vowelBonusScoreHistory);
+
             return res.Success(vowelBonusScoreHistoryDto, BaseConst.SAVE_SUCCESS);
         }
         catch (Exception ex)

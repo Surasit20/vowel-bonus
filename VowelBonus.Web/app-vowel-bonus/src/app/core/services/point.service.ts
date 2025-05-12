@@ -8,8 +8,8 @@ import { catchError, map } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
-  private apiUrl = environment.apiUrl + 'Auth/';
+export class PointService {
+  private apiUrl = environment.apiUrl + 'VowelBonusScoreHistories/';
 
   private currentUser: any = null;
 
@@ -21,17 +21,12 @@ export class AuthService {
    
   }
 
-  public get userName() {
-    return this.secureStorageService.recallUserName();
-  }
-  public get userLoggedIn() {
-    return this.currentUser;
-  }
 
-  login(username: string) {
+  calculatePoint(word: string) {
     return this.http
-      .post(this.apiUrl + 'Login', {
-        UserName: username,
+      .post(this.apiUrl + 'CreateVowelBonusScoreHistories', {
+        Word: word,
+        UserId:1 //TODO: เดี๋ยวกลับมาแก้
       })
       .pipe(
         map((result: any) => {
@@ -48,22 +43,5 @@ export class AuthService {
           return error.error;
         })
       );
-  }
-
-  logout() {
-    return this.http.post(this.apiUrl + 'Logout', {}).subscribe({
-      next: () => {
-        this.secureStorageService.removeUserName();
-        this.gotoLoginPage();
-      },
-    });
-  }
-
-  gotoLoginPage() {
-    this.router.navigate(['login']);
-  }
-
-    gotoHomePage() {
-    this.router.navigate(['home']);
   }
 }

@@ -20,6 +20,7 @@
       "paths": {
       "@vowel-bonus-app/*": ["./src/app/*"],
       "@env/*": ["./src/environments/*"],
+      "@shared/*": ["./src/app/shared/*"],
     },
 
   },

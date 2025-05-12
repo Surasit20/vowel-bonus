@@ -16,9 +16,9 @@ namespace VowelBonus.API.Controllers.v1
         {
         }
         [HttpPost("Login", Name = "Login")]
-        public async Task<Response<UserDto>> Login(LoginDto login)
+        public async Task<Response<UserDto>> Login(LoginDto loginDto)
         {
-            return await _sender.Send(new LoginCommand(login));
+            return await _sender.Send(new LoginCommand(loginDto));
         }
     }
 }   
