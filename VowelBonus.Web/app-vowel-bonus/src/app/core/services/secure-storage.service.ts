@@ -1,33 +1,43 @@
 import { Injectable } from '@angular/core';
 import { environment } from '@env/environment.development';
+import { User } from '../models/user.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SecureStorageService {
   constructor() {}
+  private currentUserId: number | undefined;
 
-  /* ============== User Name ================ */
-  recallUserName() {
-    let data: any = null;
+  /* ============== User ================ */
+
+  recallUser(): User | null {
+    let data: string | null = null;
     if (localStorage) {
-      data = localStorage.getItem(environment.storageKeys.userName);
+      data = localStorage.getItem(environment.storageKeys.user);
     }
-    return data;
+
+    if (data) {
+      const user: User = JSON.parse(data);
+      return user;
+    }
+    
+    return null;
   }
-  rememberUserName(data: any) {
+  rememberUser(data: any) {
     if (localStorage) {
       if (data) {
-        localStorage.setItem(environment.storageKeys.userName, data);
+        localStorage.setItem(environment.storageKeys.user, JSON.stringify(data));
       } else {
-        localStorage.removeItem(environment.storageKeys.userName);
+        localStorage.removeItem(environment.storageKeys.user);
       }
       return true;
     }
     return false;
   }
 
-  removeUserName() {
-    return this.rememberUserName(null);
+  removeUser() {
+    return this.rememberUser(null);
   }
 }

@@ -9,5 +9,5 @@ public class UserDto
 
     public DateTimeOffset? LastLoginDate { get; set; }
 
-    public ICollection<VowelBonusScoreHistoryDto> VowelBonusScoreHistories { get; set; } = new List<VowelBonusScoreHistoryDto>();
+    public IEnumerable<VowelBonusScoreHistoryDto> VowelBonusScoreHistories { get; set; } = new List<VowelBonusScoreHistoryDto>();
 }

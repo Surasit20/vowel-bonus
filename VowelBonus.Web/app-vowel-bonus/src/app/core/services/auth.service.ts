@@ -3,7 +3,9 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '@env/environment.development';
-import { catchError, map } from 'rxjs';
+import { catchError, map, throwError } from 'rxjs';
+import { User } from '../models/user.model';
+import { ApiResponse } from '../models/api-response.model';
 
 @Injectable({
   providedIn: 'root',
@@ -17,35 +19,29 @@ export class AuthService {
     private http: HttpClient,
     public router: Router,
     private secureStorageService: SecureStorageService
-  ) {
-   
-  }
+  ) {}
 
-  public get userName() {
-    return this.secureStorageService.recallUserName();
-  }
   public get userLoggedIn() {
-    return this.currentUser;
+    return this.secureStorageService.recallUser();
   }
 
   login(username: string) {
     return this.http
-      .post(this.apiUrl + 'Login', {
+      .post<ApiResponse<User>>(this.apiUrl + 'Login', {
         UserName: username,
       })
       .pipe(
-        map((result: any) => {
+        map((result: ApiResponse<User>) => {
+          if (result?.succeeded && result?.result) {
+            let user = {userId:result?.result.userId , 
+                        username:result?.result.userName}
+            this.secureStorageService.rememberUser(user);
+          }
+
           return result;
         }),
         catchError((error: HttpErrorResponse) => {
-          console.error(error)
-          console.error(
-            error.statusText,
-            error.status,
-            error.message,
-            error.error
-          );
-          return error.error;
+          return throwError(() => error);
         })
       );
   }
@@ -53,7 +49,7 @@ export class AuthService {
   logout() {
     return this.http.post(this.apiUrl + 'Logout', {}).subscribe({
       next: () => {
-        this.secureStorageService.removeUserName();
+        this.secureStorageService.removeUser();
         this.gotoLoginPage();
       },
     });
@@ -63,7 +59,7 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-    gotoHomePage() {
+  gotoHomePage() {
     this.router.navigate(['home']);
   }
 }

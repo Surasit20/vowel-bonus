@@ -21,8 +21,10 @@ namespace VowelBonus.Shared.Common.Models
             { 'a', 2 },
             { 'e', 3 },
             { 'i', 5 },
-            { 'o', 1 },
-            { 'u', 1 }
+            { 'o', 7 },
+            { 'u', 9 }
         };
+
+        public const int DEFAULT_TASK = 20;
     }
 }

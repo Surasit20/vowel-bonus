@@ -90,7 +90,7 @@ namespace VowelBonus.Infrastructure.Persistence.Repositories
         {
             return await _context.User.Include(i => i.VowelBonusScoreHistories
                                        .Where(f => f.IsActive == true && 
-                                                   f.IsDelete == false).OrderByDescending(v => v.CreatedDate).Take(20)) //<--- รอทำ Paging
+                                                   f.IsDelete == false).OrderByDescending(v => v.CreatedDate).Take(BaseConst.DEFAULT_TASK)) //<--- รอทำ Paging
                                       .FirstOrDefaultAsync(f => f.UserName == userName && 
                                                                 f.IsDelete == false && 
                                                                 f.IsActive == true);

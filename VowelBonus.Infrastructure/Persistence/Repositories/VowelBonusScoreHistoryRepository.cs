@@ -55,5 +55,12 @@ namespace VowelBonus.Domain.Persistence.Repositories
                                                                     f.IsActive == true)
                                                          .SumAsync(f => f.Point);
         }
+
+        public async Task<IEnumerable<VowelBonusScoreHistory>> GetByTaskAsync(int userId, int task)
+        {
+            return await _context.VowelBonusScoreHistory.Where(f => f.UserId == userId &&
+                                                                    f.IsDelete == false &&
+                                                                    f.IsActive == true).OrderByDescending(o=>o.CreatedDate).Take(task).ToListAsync();
+        }
     }
 }

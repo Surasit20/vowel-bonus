@@ -6,4 +6,5 @@ public class VowelBonusScoreHistoryDto
 {
     public string Word { get; set; } // Word (length: 400)
     public int Point { get; set; } // Point (int)
+    public DateTimeOffset? CreatedDate { get; set; }
 }

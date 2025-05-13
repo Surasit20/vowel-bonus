@@ -1,11 +1,11 @@
 ﻿namespace VowelBonus.Application.v1.VowelBonusScoreHistories;
 
-public record CreateVowelBonusScoreHistoryCommand(VowelBonusScoreHistorySaveDto args) : IRequest<Response<VowelBonusScoreHistoryDto>>
+public record CreateVowelBonusScoreHistoryCommand(VowelBonusScoreHistorySaveDto args) : IRequest<Response<VowelBonusScoreHistoryResponseDto>>
 {
     public VowelBonusScoreHistorySaveDto Args = args;
 }
 
-public class CreateVowelBonusScoreHistoryHandler : IRequestHandler<CreateVowelBonusScoreHistoryCommand, Response<VowelBonusScoreHistoryDto>>
+public class CreateVowelBonusScoreHistoryHandler : IRequestHandler<CreateVowelBonusScoreHistoryCommand, Response<VowelBonusScoreHistoryResponseDto>>
 {
     private readonly IVowelBonusScoreHistoryRepository _vowelBonusScoreHistoryRepository;
     private readonly IMapper _mapper;
@@ -15,24 +15,31 @@ public class CreateVowelBonusScoreHistoryHandler : IRequestHandler<CreateVowelBo
         _mapper = mapper;
     }
 
-    public async Task<Response<VowelBonusScoreHistoryDto>> Handle(CreateVowelBonusScoreHistoryCommand request, CancellationToken cancellationToken)
+    public async Task<Response<VowelBonusScoreHistoryResponseDto>> Handle(CreateVowelBonusScoreHistoryCommand request, CancellationToken cancellationToken)
     {
         try
         {
-            var res = new Response<VowelBonusScoreHistoryDto>();
+            var res = new Response<VowelBonusScoreHistoryResponseDto>();
             var args = request.Args;
 
             var vowelBonusScoreHistory = _mapper.Map<VowelBonusScoreHistorySaveDto,VowelBonusScoreHistory>(args);
             vowelBonusScoreHistory.Point = CalculateVowelPoint(vowelBonusScoreHistory.Word);
+
             await _vowelBonusScoreHistoryRepository.AddAsync(vowelBonusScoreHistory);
+            var totalPoint = await _vowelBonusScoreHistoryRepository.GetTotalPointByUserIdAsync(args.UserId);
+            var vowelBonusScoreHistories = await _vowelBonusScoreHistoryRepository.GetByTaskAsync(args.UserId, BaseConst.DEFAULT_TASK);
 
-            var vowelBonusScoreHistoryDto = _mapper.Map<VowelBonusScoreHistory,VowelBonusScoreHistoryDto>(vowelBonusScoreHistory);
+            var vowelBonusScoreHistoryDto = _mapper.Map<IEnumerable<VowelBonusScoreHistory>, IEnumerable<VowelBonusScoreHistoryDto>>(vowelBonusScoreHistories);
 
-            return res.Success(vowelBonusScoreHistoryDto, BaseConst.SAVE_SUCCESS);
+            var vowelBonusScoreHistoryResponseDto = new VowelBonusScoreHistoryResponseDto();
+            vowelBonusScoreHistoryResponseDto.TotalPoint = totalPoint;
+            vowelBonusScoreHistoryResponseDto.VowelBonusScoreHistories = vowelBonusScoreHistoryDto;
+
+            return res.Success(vowelBonusScoreHistoryResponseDto, BaseConst.SAVE_SUCCESS);
         }
         catch (Exception ex)
         {
-            return new Response<VowelBonusScoreHistoryDto>().Failure(ex.Message);
+            return new Response<VowelBonusScoreHistoryResponseDto>().Failure(ex.Message);
         }
     }
 
@@ -54,9 +61,17 @@ public class CreateVowelBonusScoreHistoryHandler : IRequestHandler<CreateVowelBo
                 {
                     point += BaseConst.VOWEL_SCORES[input[i]] * 2;
                 }
-                else if (BaseConst.VOWEL_SCORES.TryGetValue(input[i], out int value) && (BaseConst.VOWEL_SCORES.ContainsKey(input[i-1]) || BaseConst.VOWEL_SCORES.ContainsKey(input[i + 1])))
+                else if (BaseConst.VOWEL_SCORES.TryGetValue(input[i], out int value1) && 
+                                                            i != 0 &&
+                                                            i != len &&
+                                                            (BaseConst.VOWEL_SCORES.ContainsKey(input[i-1]) || 
+                                                            BaseConst.VOWEL_SCORES.ContainsKey(input[i + 1])))
                 {
-                    point += value * 2;
+                    point += value1 * 2;
+                }
+                else if (BaseConst.VOWEL_SCORES.TryGetValue(input[i], out int value2))
+                {
+                    point += value2;
                 }
                 else
                 {

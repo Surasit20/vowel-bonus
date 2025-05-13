@@ -14,6 +14,8 @@ namespace VowelBonus.Domain.Interfaces
 
         Task<IEnumerable<VowelBonusScoreHistory>> GetAllAsync();
 
+        Task<IEnumerable<VowelBonusScoreHistory>> GetByTaskAsync(int userId, int task);
+
         Task AddAsync(VowelBonusScoreHistory history);
 
         Task UpdateAsync(VowelBonusScoreHistory history);

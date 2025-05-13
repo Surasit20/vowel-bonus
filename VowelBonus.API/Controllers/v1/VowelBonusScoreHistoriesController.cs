@@ -17,7 +17,7 @@ namespace VowelBonus.API.Controllers.v1
         }
 
         [HttpPost("CreateVowelBonusScoreHistories", Name = "CreateVowelBonusScoreHistories")]
-        public async Task<Response<VowelBonusScoreHistoryDto>> CreateVowelBonusScoreHistories([FromBody] VowelBonusScoreHistorySaveDto args)
+        public async Task<Response<VowelBonusScoreHistoryResponseDto>> CreateVowelBonusScoreHistories([FromBody] VowelBonusScoreHistorySaveDto args)
         {
             return await _sender.Send(new CreateVowelBonusScoreHistoryCommand(args));
         }
