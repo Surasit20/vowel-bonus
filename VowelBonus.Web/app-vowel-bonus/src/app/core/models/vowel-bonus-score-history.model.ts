@@ -1,5 +1,5 @@
 export interface VowelBonusScoreHistory {
   word: string;
-  int: number;
+  point: number;
   createdDate?: Date;
 }

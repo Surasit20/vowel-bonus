@@ -1,1 +1,11 @@
-<p>Vowel Bonus!</p>
+<nav class="navbar">
+  <div class="navbar-left">
+    <p class="vowel-bonus">Vowel Bonus!</p>
+  </div>
+  <div class="navbar-center">
+    <p class="welcome-message">Welcome back, <span class="user-name">{{currentUser?.userName}}</span>!</p>
+  </div>
+  <div class="navbar-right">
+    <button type="button" class="logout-button" (click)="logout()">Logout</button>
+  </div>
+</nav>

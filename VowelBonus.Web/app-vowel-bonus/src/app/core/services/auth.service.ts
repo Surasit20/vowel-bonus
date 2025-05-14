@@ -47,12 +47,15 @@ export class AuthService {
   }
 
   logout() {
-    return this.http.post(this.apiUrl + 'Logout', {}).subscribe({
-      next: () => {
-        this.secureStorageService.removeUser();
-        this.gotoLoginPage();
-      },
-    });
+    this.secureStorageService.removeUser();
+    //Wait For Implement API
+
+    // return this.http.post(this.apiUrl + 'Logout', {}).subscribe({
+    //   next: () => {
+    //     this.secureStorageService.removeUser();
+    //     this.gotoLoginPage();
+    //   },
+    // });
   }
 
   gotoLoginPage() {

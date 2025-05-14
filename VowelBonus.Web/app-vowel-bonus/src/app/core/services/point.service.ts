@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { environment } from '@env/environment.development';
 import { catchError, map, throwError } from 'rxjs';
 import { AuthService } from './auth.service';
+import { VowelBonusScoreResponse } from '../models/vowel-bonus-score-response.model';
+import { ApiResponse } from '../models/api-response.model';
 
 @Injectable({
   providedIn: 'root',
@@ -23,14 +25,18 @@ export class PointService {
 
   calculatePoint(word: string) {
     return this.http
-      .post(this.apiUrl + 'CreateVowelBonusScoreHistories', {
+      .post<ApiResponse<VowelBonusScoreResponse>>(this.apiUrl + 'CreateVowelBonusScoreHistories', {
         Word: word,
         UserId: this.authService.userLoggedIn?.userId,
       })
       .pipe(
-        map((result: any) => {
-          return result;
-        }),
+    map((result: ApiResponse<VowelBonusScoreResponse>) => {
+            if (result?.succeeded && result?.result) {
+
+            }
+  
+            return result;
+          }),
         catchError((error: HttpErrorResponse) => {
           return throwError(() => error);
         })

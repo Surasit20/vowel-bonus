@@ -12,8 +12,7 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 })
 export class ContentComponent {
   word!: string;
-  totalPoint: number = 0;
-  currentUser: User | null = null;
+  currentUser?: User;
   constructor(private pointService: PointService, private dataUtil: DataUtil) {
       this.dataUtil.currentUser$.subscribe({
       next: (currentUser) => {
@@ -24,10 +23,11 @@ export class ContentComponent {
 
   onSend() {
     this.pointService.calculatePoint(this.word).subscribe({
-      next: (res: any) => {
-        if (res.succeeded) {
-          this.totalPoint = res.result.totalPoint;
-          this.dataUtil.currentUser$.next(res.result);
+      next: (res) => {
+        if (res.succeeded && res.result && this.currentUser) {
+          this.currentUser.totalPoint = res.result.totalPoint;
+          this.currentUser.vowelBonusScoreHistories = res.result.vowelBonusScoreHistories;
+          this.dataUtil.currentUser$.next(this.currentUser);
           this.word = "";
         }
       },

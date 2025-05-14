@@ -55,6 +55,8 @@ namespace VowelBonus.Infrastructure.Persistence.Repositories
             if (userExist != null)
             {
                 userExist.UserName = user.UserName;
+                userExist.LastLoginDate = user.LastLoginDate;
+
                 _context.User.Update(userExist);
                 await _context.SaveChangesAsync();
                 return userExist;

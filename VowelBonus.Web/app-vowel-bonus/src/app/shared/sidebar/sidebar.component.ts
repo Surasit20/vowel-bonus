@@ -1,10 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { User } from '@vowel-bonus-app/core/models/user.model';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
+import { HistoryItemComponent } from '../history-item/history-item.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
+  imports: [HistoryItemComponent,CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })

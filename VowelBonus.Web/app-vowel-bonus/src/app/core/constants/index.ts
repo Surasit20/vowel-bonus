@@ -1,4 +1,2 @@
-export const APP_ACTION_STATE = {
-
-};
+export const DEFAULT_FORMAT_DATE_TIME = 'dd/MM/yyyy HH:mm'
 

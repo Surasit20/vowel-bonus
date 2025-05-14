@@ -14,13 +14,15 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, Response<UserDt
     private readonly IVowelBonusScoreHistoryRepository _vowelBonusScoreHistoryRepository;
     private readonly IMapper _mapper;
     private readonly IMediator _mediator;
+    private readonly TimeProvider _dateTime;
 
-    public LoginCommandHandler(IUserRepository userRepository, IVowelBonusScoreHistoryRepository vowelBonusScoreHistoryRepository, IMapper mapper, IMediator mediator)
+    public LoginCommandHandler(IUserRepository userRepository, IVowelBonusScoreHistoryRepository vowelBonusScoreHistoryRepository, IMapper mapper, IMediator mediator, TimeProvider dateTime)
     {
         _userRepository = userRepository;
         _vowelBonusScoreHistoryRepository = vowelBonusScoreHistoryRepository;
         _mapper = mapper;
         _mediator = mediator;
+        _dateTime = dateTime;
     }
 
     public async Task<Response<UserDto>> Handle(LoginCommand request, CancellationToken cancellationToken)
@@ -36,6 +38,9 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, Response<UserDt
                 var user = await _userRepository.GetByUserNameAsync(args.UserName);
                 if (user != null) 
                 {
+                    user.LastLoginDate = _dateTime.GetUtcNow();
+                    await _userRepository.UpdateAsync(user);
+
                     var userDto = _mapper.Map<User, UserDto>(user);
                     userDto.TotalPoint = await _vowelBonusScoreHistoryRepository.GetTotalPointByUserIdAsync(user.UserId);
                     return res.Success(userDto, BaseConst.SAVE_SUCCESS);
@@ -47,7 +52,7 @@ public class LoginCommandHandler : IRequestHandler<LoginCommand, Response<UserDt
             }
             else 
             {
-                var newUser = await _mediator.Send(new CreateUserCommand(new UserSaveDto() { UserName = args.UserName}));
+                var newUser = await _mediator.Send(new CreateUserCommand(new UserSaveDto() { UserName = args.UserName}), cancellationToken);
 
                 if (newUser != null && newUser.Succeeded == true && newUser.Result != null) 
                 { 

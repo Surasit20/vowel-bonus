@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VowelBonus.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd0f3eb877183c3076ee1495a53a6911356acf8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+540f2b2e05346824f8ac665c7ea61f3f3f14949a")]
 [assembly: System.Reflection.AssemblyProductAttribute("VowelBonus.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VowelBonus.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

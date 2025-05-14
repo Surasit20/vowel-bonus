@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global CSS */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+    font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', sans-serif;
+}

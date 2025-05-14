@@ -7,8 +7,8 @@ import { User } from '../models/user.model';
   providedIn: 'root',
 })
 export class DataUtil {
-  currentUser$: BehaviorSubject<User | null>;
-  private user: User | null = null;
+  currentUser$: BehaviorSubject<User>;
+  private user?: User;
 
   constructor() {
     this.currentUser$ = new BehaviorSubject<any | null>(this.user);
