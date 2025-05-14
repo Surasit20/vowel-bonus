@@ -1,36 +1,21 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from '@env/environment';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataUtil {
-  currentReceiptOrder$: BehaviorSubject<any | null>;
-  private receiptOrder: any = {};
-
-  currentTotalPoint$: BehaviorSubject<number>;
-  private totalPoint: number = 0;
-
+  currentUser$: BehaviorSubject<User | null>;
+  private user: User | null = null;
 
   constructor() {
-    this.currentReceiptOrder$ = new BehaviorSubject<any | null>(
-      this.receiptOrder
-    );
+    this.currentUser$ = new BehaviorSubject<any | null>(this.user);
 
-    this.currentReceiptOrder$.subscribe({
+    this.currentUser$.subscribe({
       next: (data) => {
-        this.receiptOrder = data;
-      },
-    });
-
-    this.currentTotalPoint$ = new BehaviorSubject<number>(
-    this.totalPoint
-    );
-
-      this.currentTotalPoint$.subscribe({
-      next: (data) => {
-        this.totalPoint = data;
+        this.user = data;
       },
     });
   }

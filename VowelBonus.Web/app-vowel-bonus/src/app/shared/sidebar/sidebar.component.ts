@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from '@vowel-bonus-app/core/models/user.model';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 
 @Component({
@@ -8,12 +9,12 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
   styleUrl: './sidebar.component.css',
 })
 export class SidebarComponent {
-  totalPoint: number = 0;
+  currentUser: User | null = null;
 
   constructor(private dataUtil: DataUtil) {
-    this.dataUtil.currentTotalPoint$.subscribe({
-      next: (totalPoint) => {
-        this.totalPoint = totalPoint;
+      this.dataUtil.currentUser$.subscribe({
+      next: (currentUser) => {
+        this.currentUser = currentUser;
       },
     });
   }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { User } from '@vowel-bonus-app/core/models/user.model';
 import { PointService } from '@vowel-bonus-app/core/services/point.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 
@@ -12,10 +13,11 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 export class ContentComponent {
   word!: string;
   totalPoint: number = 0;
+  currentUser: User | null = null;
   constructor(private pointService: PointService, private dataUtil: DataUtil) {
-    this.dataUtil.currentTotalPoint$.subscribe({
-      next: (totalPoint) => {
-        this.totalPoint = totalPoint;
+      this.dataUtil.currentUser$.subscribe({
+      next: (currentUser) => {
+        this.currentUser = currentUser;
       },
     });
   }
@@ -25,7 +27,7 @@ export class ContentComponent {
       next: (res: any) => {
         if (res.succeeded) {
           this.totalPoint = res.result.totalPoint;
-          this.dataUtil.currentTotalPoint$.next(this.totalPoint);
+          this.dataUtil.currentUser$.next(res.result);
           this.word = "";
         }
       },

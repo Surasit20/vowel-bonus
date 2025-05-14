@@ -196,8 +196,7 @@
               "RelativeToolTip": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Profiles\\VowelBonusScoreHistoryProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:24:45.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:24:45.387Z"
             },
             {
               "$type": "Document",
@@ -209,8 +208,7 @@
               "RelativeToolTip": "VowelBonus.Domain\\Entities\\VowelBonusScoreHistory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:19:15.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:19:15.086Z"
             },
             {
               "$type": "Document",
@@ -222,8 +220,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:18:09.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:18:09.04Z"
             },
             {
               "$type": "Document",
@@ -235,8 +232,7 @@
               "RelativeToolTip": "VowelBonus.Infrastructure\\Persistence\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAFgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:08:10.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:08:10.273Z"
             },
             {
               "$type": "Document",
@@ -248,8 +244,7 @@
               "RelativeToolTip": "VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T13:06:03.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T13:06:03.458Z"
             },
             {
               "$type": "Document",
@@ -261,8 +256,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\Auth\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:55:24.063Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:55:24.063Z"
             },
             {
               "$type": "Document",
@@ -274,8 +268,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\Users\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:55:12.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:55:12.312Z"
             },
             {
               "$type": "Document",
@@ -287,8 +280,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\Users\\UserUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:55:10.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:55:10.389Z"
             },
             {
               "$type": "Document",
@@ -300,8 +292,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T12:54:14.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T12:54:14.05Z"
             },
             {
               "$type": "Document",
@@ -313,8 +304,7 @@
               "RelativeToolTip": "VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAQwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T15:43:38.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T15:43:38.885Z"
             },
             {
               "$type": "Document",
@@ -339,8 +329,7 @@
               "RelativeToolTip": "VowelBonus.Shared\\Common\\Constants\\BaseConst.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T15:37:33.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T15:37:33.778Z"
             },
             {
               "$type": "Document",
@@ -388,8 +377,7 @@
               "RelativeToolTip": "VowelBonus.Application\\v1\\Auth\\Commands\\LoginCommand.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T15:43:55.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T15:43:55.735Z"
             },
             {
               "$type": "Document",
@@ -401,8 +389,7 @@
               "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:48:28.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T14:48:28.229Z"
             },
             {
               "$type": "Document",
@@ -414,8 +401,7 @@
               "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAWwBgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:48:24.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T14:48:24.97Z"
             },
             {
               "$type": "Document",
@@ -427,8 +413,7 @@
               "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:48:03.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T14:48:03.208Z"
             }
           ]
         }

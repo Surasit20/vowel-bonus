@@ -2,6 +2,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from '@vowel-bonus-app/core/models/user.model';
 import { AuthService } from '@vowel-bonus-app/core/services/auth.service';
 import { SecureStorageService } from '@vowel-bonus-app/core/services/secure-storage.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
@@ -14,16 +15,16 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 })
 export class LoginComponent {
   username!: string;
-  totalPoint: number = 0;
+  currentUser: User | null = null;
   constructor(
     private router: Router,
     private authService: AuthService,
     private secureStorageService: SecureStorageService,
     private dataUtil: DataUtil
   ) {
-    this.dataUtil.currentTotalPoint$.subscribe({
-      next: (totalPoint) => {
-        this.totalPoint = totalPoint;
+      this.dataUtil.currentUser$.subscribe({
+      next: (currentUser) => {
+        this.currentUser = currentUser;
       },
     });
   }
@@ -32,8 +33,7 @@ export class LoginComponent {
     this.authService.login(this.username).subscribe({
       next: (res) => {
         if (res.succeeded && res.result) {
-          this.totalPoint = res.result.totalPoint ?? 0;
-          this.dataUtil.currentTotalPoint$.next(this.totalPoint);
+          this.dataUtil.currentUser$.next(res.result);
           this.authService.gotoHomePage();
         }
       },
