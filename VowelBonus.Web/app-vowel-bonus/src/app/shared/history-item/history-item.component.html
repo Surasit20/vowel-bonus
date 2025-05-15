@@ -1,6 +1,6 @@
 <h2 class="history-title">Latest 20 Records</h2>
 <ul class="history-list">
-  @for (item of historyItem; track item) {
+  @for (item of historyItem; track item.createdDate) {
     <li class="history-item">
       <div class="word">{{ item.word }}</div>
       <div class="point">Point: {{ item.point }}</div>
