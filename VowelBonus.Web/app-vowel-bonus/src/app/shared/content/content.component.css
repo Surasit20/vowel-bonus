@@ -1,4 +1,4 @@
-.login-form {
+.word-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,14 +13,14 @@
   height: 65vh; 
 }
 
-.login-form label {
+.word-form label {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
 }
 
-.login-form input {
+.word-form input {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -30,13 +30,14 @@
   outline: none;
 }
 
-.login-form input:focus {
+.word-form input:focus {
   border-color: #303f9f;
 }
 
-.login-form button {
+.word-form .btn-send{
   width: 100%;
   padding: 12px;
+  margin: 10px;
   background-color: #3f51b5;
   color: white;
   font-size: 18px;
@@ -46,11 +47,31 @@
   transition: background-color 0.3s ease;
 }
 
-.login-form button:disabled {
+.word-form .btn-send:disabled {
   background-color: #c1c1c1;
   cursor: not-allowed;
 }
 
-.login-form button:hover:not(:disabled) {
+.word-form .btn-send:hover:not(:disabled) {
   background-color: #303f9f;
 }
+
+.word-form .btn-clear{
+  width: 100%;
+  padding: 12px;
+  margin: 10px;
+  background-color:#e53935;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.word-form .btn-clear:hover {
+  background-color: #b71c1c !important;
+}
+

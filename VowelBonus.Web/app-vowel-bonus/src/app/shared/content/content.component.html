@@ -1,4 +1,4 @@
-  <form (ngSubmit)="onSend()" #loginForm="ngForm" class="login-form">
+  <form (ngSubmit)="onSend()" #wordForm="ngForm" class="word-form">
     <label for="word">Enter Your Word</label>
     <input 
       type="text" 
@@ -6,10 +6,15 @@
       name="word" 
       [(ngModel)]="word" 
       required
-      placeholder="connext"
+      placeholder="connex"
+      (keydown)="allowOnlyEnglishLetters($event)"
     />
 
-    <button type="submit" [disabled]="!loginForm.valid">
+    <button  class ="btn-send" type="submit" [disabled]="!wordForm.valid">
       Send
+    </button>
+
+    <button type="button" class="btn-clear" type="button" (click)="clearInput()">
+      Clear
     </button>
   </form>

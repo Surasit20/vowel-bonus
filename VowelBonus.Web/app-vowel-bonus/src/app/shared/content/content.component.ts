@@ -14,7 +14,7 @@ export class ContentComponent {
   word!: string;
   currentUser?: User;
   constructor(private pointService: PointService, private dataUtil: DataUtil) {
-      this.dataUtil.currentUser$.subscribe({
+    this.dataUtil.currentUser$.subscribe({
       next: (currentUser) => {
         this.currentUser = currentUser;
       },
@@ -26,14 +26,28 @@ export class ContentComponent {
       next: (res) => {
         if (res.succeeded && res.result && this.currentUser) {
           this.currentUser.totalPoint = res.result.totalPoint;
-          this.currentUser.vowelBonusScoreHistories = res.result.vowelBonusScoreHistories;
+          this.currentUser.vowelBonusScoreHistories =
+            res.result.vowelBonusScoreHistories;
           this.dataUtil.currentUser$.next(this.currentUser);
-          this.word = "";
+          this.word = '';
         }
       },
       error: (error) => {
         console.log('Error Something');
       },
     });
+  }
+
+  clearInput() {
+    this.word = '';
+  }
+
+  allowOnlyEnglishLetters(event: KeyboardEvent) {
+    console.log(event.key)
+    const pattern = /^[a-zA-Z]+$/;
+    const inputChar = event.key;
+    if (!pattern.test(inputChar)) {
+      event.preventDefault();
+    }
   }
 }

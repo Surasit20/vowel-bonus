@@ -1,0 +1,13 @@
+@if(showDialog){
+<div class="custom-dialog-backdrop">
+  <div class="custom-dialog">
+    <h2 class="dialog-title">Confirm Dialog</h2>
+    <p class="dialog-message">{{content}}</p>
+    <div class="dialog-actions">
+      <button (click)="onConfirm()">OK</button>
+      <button (click)="showDialog = false">Cancel</button>
+    </div>
+  </div>
+</div>
+
+}

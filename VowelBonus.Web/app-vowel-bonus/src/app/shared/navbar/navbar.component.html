@@ -6,6 +6,12 @@
     <p class="welcome-message">Welcome back, <span class="user-name">{{currentUser?.userName}}</span>!</p>
   </div>
   <div class="navbar-right">
-    <button type="button" class="logout-button" (click)="logout()">Logout</button>
+    <button type="button" class="logout-button" (click)="confirmLogout()">Logout</button>
   </div>
 </nav>
+
+<app-confirm-dialog 
+  [content]="contentConfirm" 
+  (confirmed)="handleConfirm()"
+  (cancelled)="handleCancel()">
+</app-confirm-dialog>
