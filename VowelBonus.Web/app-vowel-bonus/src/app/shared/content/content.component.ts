@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from '@vowel-bonus-app/core/models/user.model';
 import { PointService } from '@vowel-bonus-app/core/services/point.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-content',
@@ -11,14 +12,13 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
   styleUrl: './content.component.css',
 })
 export class ContentComponent {
+  destroy$ = new Subject<void>();
   word!: string;
   currentUser?: User;
   constructor(private pointService: PointService, private dataUtil: DataUtil) {
-    this.dataUtil.currentUser$.subscribe({
-      next: (currentUser) => {
-        this.currentUser = currentUser;
-      },
-    });
+    this.dataUtil.currentUser$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((user) => (this.currentUser = user));
   }
 
   onSend() {
@@ -33,7 +33,7 @@ export class ContentComponent {
         }
       },
       error: (error) => {
-        console.log('Error Something');
+        console.log(error);
       },
     });
   }
@@ -43,11 +43,16 @@ export class ContentComponent {
   }
 
   allowOnlyEnglishLetters(event: KeyboardEvent) {
-    console.log(event.key)
+    console.log(event.key);
     const pattern = /^[a-zA-Z]+$/;
     const inputChar = event.key;
     if (!pattern.test(inputChar)) {
       event.preventDefault();
     }
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

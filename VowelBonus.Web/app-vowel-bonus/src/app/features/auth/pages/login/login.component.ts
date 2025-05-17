@@ -6,6 +6,7 @@ import { User } from '@vowel-bonus-app/core/models/user.model';
 import { AuthService } from '@vowel-bonus-app/core/services/auth.service';
 import { SecureStorageService } from '@vowel-bonus-app/core/services/secure-storage.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
   imports: [FormsModule],
 })
 export class LoginComponent {
+  destroy$ = new Subject<void>();
   username!: string;
   currentUser: User | null = null;
   constructor(
@@ -22,11 +24,9 @@ export class LoginComponent {
     private secureStorageService: SecureStorageService,
     private dataUtil: DataUtil
   ) {
-      this.dataUtil.currentUser$.subscribe({
-      next: (currentUser) => {
-        this.currentUser = currentUser;
-      },
-    });
+  this.dataUtil.currentUser$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(user => this.currentUser = user);
   }
 
    goToHamePage() {
@@ -45,5 +45,10 @@ export class LoginComponent {
         console.log('ไม่สามารถเข้าสู่ระบบได้');
       },
     });
+  }
+
+   ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

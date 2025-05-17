@@ -3,6 +3,7 @@ import { Router, RouterOutlet } from '@angular/router';
 import { User } from './core/models/user.model';
 import { AuthService } from './core/services/auth.service';
 import { DataUtil } from './core/utils/data.util';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ import { DataUtil } from './core/utils/data.util';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
+  destroy$ = new Subject<void>();
   title = 'app-vowel-bonus';
   currentUser?: User;
 
@@ -19,11 +21,9 @@ export class AppComponent implements OnInit {
     private authService: AuthService,
     private dataUtil: DataUtil
   ) {
-    this.dataUtil.currentUser$.subscribe({
-      next: (currentUser) => {
-        this.currentUser = currentUser;
-      },
-    });
+    this.dataUtil.currentUser$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(user => this.currentUser = user);
   }
 
   ngOnInit(): void {
@@ -33,7 +33,6 @@ export class AppComponent implements OnInit {
         .subscribe({
           next: (res) => {
             if (res.succeeded && res.result) {
-              console.log(res.result);
               this.dataUtil.currentUser$.next(res.result);
             }
           },
@@ -44,5 +43,10 @@ export class AppComponent implements OnInit {
     } else {
       this.router.navigate(['/login']);
     }
+  }
+
+   ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
