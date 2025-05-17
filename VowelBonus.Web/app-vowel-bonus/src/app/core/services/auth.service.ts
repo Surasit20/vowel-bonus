@@ -34,7 +34,7 @@ export class AuthService {
         map((result: ApiResponse<User>) => {
           if (result?.succeeded && result?.result) {
             let user = {userId:result?.result.userId , 
-                        username:result?.result.userName}
+                        userName:result?.result.userName}
             this.secureStorageService.rememberUser(user);
           }
 

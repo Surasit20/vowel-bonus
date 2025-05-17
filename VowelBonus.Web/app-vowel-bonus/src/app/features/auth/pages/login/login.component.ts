@@ -29,12 +29,16 @@ export class LoginComponent {
     });
   }
 
+   goToHamePage() {
+    this.router.navigate(['/home']);
+  }
+
   onLogin() {
     this.authService.login(this.username).subscribe({
       next: (res) => {
         if (res.succeeded && res.result) {
           this.dataUtil.currentUser$.next(res.result);
-          this.authService.gotoHomePage();
+          this.goToHamePage()
         }
       },
       error: (error) => {
