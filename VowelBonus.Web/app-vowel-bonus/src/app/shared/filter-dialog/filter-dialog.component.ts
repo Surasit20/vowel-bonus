@@ -21,6 +21,11 @@ export class FilterDialogComponent {
     this.cancelled.emit();
   }
 
+  onReset() {
+    this.reseted.emit();
+  }
+
+
   onOpenDialog() {
     this.showDialog = true;
   }

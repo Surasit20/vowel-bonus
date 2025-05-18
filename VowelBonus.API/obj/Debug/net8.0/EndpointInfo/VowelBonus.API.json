@@ -537,13 +537,6 @@
             "type": "string",
             "format": "date-time",
             "nullable": true
-          },
-          "vowelBonusScoreHistories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/VowelBonusScoreHistoryDto"
-            },
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -619,6 +612,10 @@
       "VowelBonusScoreHistoryDto": {
         "type": "object",
         "properties": {
+          "vowelBonusScoreHistoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "word": {
             "type": "string",
             "nullable": true

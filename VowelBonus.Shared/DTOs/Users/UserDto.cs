@@ -8,6 +8,4 @@ public class UserDto
     public int TotalPoint { get; set; }
 
     public DateTimeOffset? LastLoginDate { get; set; }
-
-    public IEnumerable<VowelBonusScoreHistoryDto> VowelBonusScoreHistories { get; set; } = new List<VowelBonusScoreHistoryDto>();
 }

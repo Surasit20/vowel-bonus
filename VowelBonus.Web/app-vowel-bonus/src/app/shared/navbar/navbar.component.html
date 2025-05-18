@@ -2,9 +2,26 @@
   <div class="navbar-left">
     <p class="vowel-bonus">Vowel Bonus!</p>
   </div>
+
   <div class="navbar-center">
-    <p class="welcome-message">Welcome back, <span class="user-name">{{currentUser?.userName}}</span>!</p>
+    @if(isEditing){
+    <div class="edit-username">
+      <input [(ngModel)]="editedUserName" class="username-input" />
+      <button class="btn save-btn" (click)="saveUserName()">💾 Save</button>
+      <button class="btn cancel-btn" (click)="cancelEdit()">✖ Cancel</button>
+    </div>
+    }@else{
+   <p class="welcome-message">
+      Welcome back,
+      <span class="user-name" (click)="startEdit()" style="cursor: pointer;">
+        {{ currentUser?.userName }}!
+        <i class="edit-icon">✎</i> <!-- หรือใส่ icon จริงถ้าใช้ font-awesome -->
+      </span>
+    </p>
+    }
+
   </div>
+
   <div class="navbar-right">
     <button type="button" class="logout-button" (click)="confirmLogout()">Logout</button>
   </div>

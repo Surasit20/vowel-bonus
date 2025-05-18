@@ -25,7 +25,7 @@ export class HistoryItemComponent {
   pageSize = 5;
   pageSizes = [5, 10, 20, 50];
   pagedItems: VowelBonusScoreHistory[] = [];
-  totalPages = 50;
+  totalPages = 0;
   totalItems = 0;
   visiblePages: number[] = [1, 2, 3, 4, 5];
   pagerStart = 1;
@@ -44,6 +44,10 @@ export class HistoryItemComponent {
     sortBy: 'createdDate',
     sortDirection: 'desc',
   };
+
+  ngOnInit(): void {
+    this.updatePagedItems();
+  }
 
   ngOnChanges(): void {
     this.updatePagedItems();
@@ -175,7 +179,30 @@ export class HistoryItemComponent {
       sortBy: 'createdDate',
       sortDirection: 'desc',
     };
-    this.applyFilters();
+  }
+
+  onEdit(item: VowelBonusScoreHistory): void {
+    console.log(item)
+  }
+
+  onDelete(item: VowelBonusScoreHistory): void {
+    if (confirm(`Are you sure to delete "${item.word}"?`)) {
+    }
+  }
+
+  startEdit(item: VowelBonusScoreHistory): void {
+    item.isEditing = true;
+    item.editingWord = item.word;
+  }
+
+  saveEdit(item: VowelBonusScoreHistory): void {
+      console.log(item)
+    item.word = item.editingWord;
+    item.isEditing = false;
+  }
+
+  cancelEdit(item: VowelBonusScoreHistory): void {
+    item.isEditing = false;
   }
 
   ngOnDestroy(): void {

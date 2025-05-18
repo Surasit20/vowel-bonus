@@ -4,10 +4,12 @@ import { AuthService } from '@vowel-bonus-app/core/services/auth.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { Subject, takeUntil } from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { UserService } from '@vowel-bonus-app/core/services/user.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [ConfirmDialogComponent],
+  imports: [ConfirmDialogComponent, FormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -16,12 +18,19 @@ export class NavbarComponent {
   currentUser?: User;
   contentConfirm: string = 'Are you sure you want to log out?';
   showDialog = false;
+  isEditing = false;
+  editedUserName = '';
+
   @ViewChild(ConfirmDialogComponent) confirmDialog!: ConfirmDialogComponent;
 
-  constructor(private dataUtil: DataUtil, private authService: AuthService) {
+  constructor(
+    private dataUtil: DataUtil,
+    private authService: AuthService,
+    private userService: UserService
+  ) {
     this.dataUtil.currentUser$
       .pipe(takeUntil(this.destroy$))
-      .subscribe(user => this.currentUser = user);
+      .subscribe((user) => (this.currentUser = user));
   }
 
   confirmLogout() {
@@ -36,12 +45,40 @@ export class NavbarComponent {
     this.confirmDialog.onCloseDialog();
   }
 
+  startEdit() {
+    this.isEditing = true;
+    this.editedUserName = this.currentUser?.userName || '';
+  }
+
+  cancelEdit() {
+    this.isEditing = false;
+  }
+
+  saveUserName() {
+    if (this.editedUserName.trim()) {
+      this.userService
+        .updateUser(this.currentUser?.userId ?? 0, this.editedUserName.trim())
+        .subscribe({
+          next: (res) => {
+            if (res.succeeded && res.result && this.currentUser) {
+              this.currentUser = res.result;
+              this.dataUtil.currentUser$.next(this.currentUser);
+            }
+          },
+          error: (error) => {
+            console.log(error);
+          },
+        });
+    }
+    this.isEditing = false;
+  }
+
   logout() {
     this.authService.logout();
     this.authService.gotoLoginPage();
   }
 
-   ngOnDestroy(): void {
+  ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }

@@ -69,10 +69,10 @@ namespace VowelBonus.Domain.Persistence.Repositories
         public async Task<IEnumerable<VowelBonusScoreHistory>> GetByFilterAsync(VowelBonusScoreHistoryFilterDto filterDto)
         {
             var query = _context.VowelBonusScoreHistory.Where(f => f.UserId == filterDto.UserId &&
-                                                                    (filterDto.StartWord == null || string.Compare(f.Word, filterDto.StartWord) >= 0) &&
-                                                                    (filterDto.EndWord == null || string.Compare(filterDto.EndWord, f.Word) >= 0) &&
-                                                                    (filterDto.StartPoint == null || filterDto.StartPoint <= f.Point) &&
-                                                                    (filterDto.EndPoint == null || filterDto.EndPoint >= f.Point) &&
+                                                                    (string.IsNullOrEmpty(filterDto.StartWord) || string.Compare(f.Word, filterDto.StartWord) >= 0) &&
+                                                                    (string.IsNullOrEmpty(filterDto.EndWord) || string.Compare(filterDto.EndWord, f.Word) >= 0) &&
+                                                                    (filterDto.StartPoint == null || f.Point >= filterDto.StartPoint) &&
+                                                                    (filterDto.EndPoint == null ||  f.Point <= filterDto.EndPoint) &&
                                                                     f.IsDelete == false &&
                                                                     f.IsActive == true);
 
@@ -104,10 +104,10 @@ namespace VowelBonus.Domain.Persistence.Repositories
         public async Task<int> GetCountByFilterAsync(VowelBonusScoreHistoryFilterDto filterDto)
         {
             return await _context.VowelBonusScoreHistory.CountAsync(f => f.UserId == filterDto.UserId &&
-                                                                         (filterDto.StartWord == null || string.Compare(f.Word, filterDto.StartWord) >= 0) &&
-                                                                         (filterDto.EndWord == null || string.Compare(filterDto.EndWord, f.Word) >= 0) &&
-                                                                         (filterDto.StartPoint == null || filterDto.StartPoint <= f.Point) &&
-                                                                         (filterDto.EndPoint == null || filterDto.EndPoint >= f.Point) &&
+                                                                         (string.IsNullOrEmpty(filterDto.StartWord) || string.Compare(f.Word, filterDto.StartWord) >= 0) &&
+                                                                         (string.IsNullOrEmpty(filterDto.EndWord) || string.Compare(filterDto.EndWord, f.Word) >= 0) &&
+                                                                         (filterDto.StartPoint == null || f.Point >= filterDto.StartPoint) &&
+                                                                         (filterDto.EndPoint == null || f.Point <= filterDto.EndPoint) &&
                                                                          f.IsDelete == false &&
                                                                          f.IsActive == true);
         }

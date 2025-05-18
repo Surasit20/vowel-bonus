@@ -52,11 +52,12 @@ export class PointService {
     startWord?: string | null,
     endWord?: string | null,
     startPoint?: number | null,
-    endPorint?: number| null,
+    endPoint?: number| null,
     sortBy?: string | null,
     sortDirection?: string | null,
 
   ) {
+    
     return this.http
       .post<ApiResponse<VowelBonusScoreHistory[]>>(
         this.apiUrl + 'GetVowelBonusScoreHistoriesByFilter',
@@ -67,7 +68,7 @@ export class PointService {
           StartWord: startWord,
           EndWord: endWord,
           StartPoint: startPoint,
-          EndPorint: endPorint,
+          EndPoint: endPoint,
           SortBy: sortBy,
           SortDirection:sortDirection
         }
