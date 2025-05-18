@@ -175,7 +175,8 @@
       },
       "VowelBonus.Domain/1.0.0": {
         "dependencies": {
-          "MediatR": "12.2.0"
+          "MediatR": "12.2.0",
+          "VowelBonus.Shared": "1.0.0"
         },
         "runtime": {
           "VowelBonus.Domain.dll": {

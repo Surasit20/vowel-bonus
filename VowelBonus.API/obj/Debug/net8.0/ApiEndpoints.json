@@ -210,6 +210,33 @@
     "EndpointName": "CreateVowelBonusScoreHistories"
   },
   {
+    "ContainingType": "VowelBonus.API.Controllers.v1.VowelBonusScoreHistoriesController",
+    "Method": "GetVowelBonusScoreHistoriesByFilter",
+    "RelativePath": "api/v1/VowelBonusScoreHistories/GetVowelBonusScoreHistoriesByFilter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "args",
+        "Type": "VowelBonus.Shared.DTOs.VowelBonusScoreHistoryFilterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VowelBonus.Shared.Common.Models.Response\u00601[[System.Collections.Generic.IEnumerable\u00601[[VowelBonus.Shared.DTOs.VowelBonusScoreHistoryDto, VowelBonus.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetVowelBonusScoreHistoriesByFilter"
+  },
+  {
     "ContainingType": "VowelBonus.API.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

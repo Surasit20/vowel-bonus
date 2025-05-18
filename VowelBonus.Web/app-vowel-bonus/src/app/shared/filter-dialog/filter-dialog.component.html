@@ -1,0 +1,12 @@
+@if(showDialog){
+<div class="custom-dialog-backdrop">
+  <div class="custom-dialog">
+    <h2 class="dialog-title">Filter Dialog</h2>
+    <ng-content></ng-content>
+    <div class="dialog-actions">
+      <button (click)="onApply()">Apply</button>
+      <button (click)="showDialog = false">Cancel</button>
+    </div>
+  </div>
+</div>
+}

@@ -125,7 +125,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\VowelBonus.Shared.csproj": {
+                "projectPath": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\VowelBonus.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

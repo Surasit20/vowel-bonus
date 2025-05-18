@@ -1,7 +1,6 @@
-import { VowelBonusScoreHistory } from "./vowel-bonus-score-history.model";
-
 export interface ApiResponse<T> {
   succeeded: boolean;
   message?: string;
+  totalRecord: number;
   result?: T;
 }

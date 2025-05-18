@@ -23,3 +23,6 @@ D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.
 D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\obj\Debug\net8.0\refint\VowelBonus.Domain.dll
 D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\obj\Debug\net8.0\VowelBonus.Domain.pdb
 D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\obj\Debug\net8.0\ref\VowelBonus.Domain.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\bin\Debug\net8.0\VowelBonus.Shared.dll
+D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\bin\Debug\net8.0\VowelBonus.Shared.pdb
+D:\vowel-bonus\vowel-bonus\VowelBonus.Domain\obj\Debug\net8.0\VowelBon.54525C1E.Up2Date

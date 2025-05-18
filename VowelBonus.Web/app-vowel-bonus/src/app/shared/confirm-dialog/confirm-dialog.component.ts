@@ -8,10 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ConfirmDialogComponent {
   @Input() content!: string;
-  showDialog = false;
   @Output() confirmed = new EventEmitter<void>();
   @Output() cancelled = new EventEmitter<void>();
 
+  showDialog = false;
 
   onConfirm() {
     this.confirmed.emit();

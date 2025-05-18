@@ -353,6 +353,55 @@
         }
       }
     },
+    "/api/v1/VowelBonusScoreHistories/GetVowelBonusScoreHistoriesByFilter": {
+      "post": {
+        "tags": [
+          "VowelBonusScoreHistories"
+        ],
+        "operationId": "GetVowelBonusScoreHistoriesByFilter",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryFilterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryFilterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryFilterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoIEnumerableResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoIEnumerableResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoIEnumerableResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -407,6 +456,10 @@
           },
           "result": {
             "type": "boolean"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -511,6 +564,10 @@
               "$ref": "#/components/schemas/UserDto"
             },
             "nullable": true
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -527,6 +584,10 @@
           },
           "result": {
             "$ref": "#/components/schemas/UserDto"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -574,6 +635,79 @@
         },
         "additionalProperties": false
       },
+      "VowelBonusScoreHistoryDtoIEnumerableResponse": {
+        "type": "object",
+        "properties": {
+          "succeeded": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VowelBonusScoreHistoryDto"
+            },
+            "nullable": true
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VowelBonusScoreHistoryFilterDto": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skip": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "sortBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "sortDirection": {
+            "type": "string",
+            "nullable": true
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "startWord": {
+            "type": "string",
+            "nullable": true
+          },
+          "endWord": {
+            "type": "string",
+            "nullable": true
+          },
+          "startPoint": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "endPoint": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "VowelBonusScoreHistoryResponseDto": {
         "type": "object",
         "properties": {
@@ -603,6 +737,10 @@
           },
           "result": {
             "$ref": "#/components/schemas/VowelBonusScoreHistoryResponseDto"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
