@@ -51,10 +51,22 @@ namespace VowelBonus.Infrastructure.Persistence.Repositories
 
         public async Task<User> UpdateAsync(User user)
         {
+            var isUserNameExist = await _context.User.AnyAsync(f => f.UserName == user.UserName &&
+                                                                    f.UserId != user.UserId && 
+                                                                    f.IsActive == true &&
+                                                                    f.IsDelete == false);
+            if (isUserNameExist)
+            {
+                throw new Exception(BaseConst.ERROR_EXIST_USER_NAME);
+            }
+
+
             var userExist = await _context.User.FindAsync(user.UserId);
+
             if (userExist != null)
             {
                 userExist.UserName = user.UserName;
+                userExist.LastLoginDate = user.LastLoginDate;
                 _context.User.Update(userExist);
                 await _context.SaveChangesAsync();
                 return userExist;

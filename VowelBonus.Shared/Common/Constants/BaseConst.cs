@@ -16,6 +16,7 @@ namespace VowelBonus.Shared.Common.Models
         public const string NOT_FOUND = "Not Found!!";
         public const string ERROR_SUCCESS = "Save Error!!";
         public const string ERROR_EXIST_USER = "User Exist!!";
+        public const string ERROR_EXIST_USER_NAME = "User Name Exist!!";
         public static readonly Dictionary<char, int> VOWEL_SCORES = new Dictionary<char, int>
         {
             { 'a', 2 },

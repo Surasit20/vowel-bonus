@@ -14,6 +14,7 @@ namespace VowelBonus.Domain.Interfaces
         Task<int> GetTotalPointByUserIdAsync(int id);
 
         Task<int> GetCountByUserIdAsync(int id);
+
         Task<int> GetCountByFilterAsync(VowelBonusScoreHistoryFilterDto filterDto);
 
         Task<IEnumerable<VowelBonusScoreHistory>> GetAllAsync();
@@ -24,7 +25,7 @@ namespace VowelBonus.Domain.Interfaces
 
         Task AddAsync(VowelBonusScoreHistory history);
 
-        Task UpdateAsync(VowelBonusScoreHistory history);
+        Task<VowelBonusScoreHistory> UpdateAsync(VowelBonusScoreHistory history);
 
         Task DeleteAsync(int id);
     }

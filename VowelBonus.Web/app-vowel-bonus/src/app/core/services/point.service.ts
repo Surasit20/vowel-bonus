@@ -8,21 +8,25 @@ import { AuthService } from './auth.service';
 import { VowelBonusScoreResponse } from '../models/vowel-bonus-score-response.model';
 import { ApiResponse } from '../models/api-response.model';
 import { VowelBonusScoreHistory } from '../models/vowel-bonus-score-history.model';
+import { User } from '../models/user.model';
+import { DataUtil } from '../utils/data.util';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PointService {
   private apiUrl = environment.apiUrl + 'VowelBonusScoreHistories/';
-
-  private currentUser: any = null;
+  currentUser: User | null = null;
 
   constructor(
     private http: HttpClient,
     public router: Router,
     private secureStorageService: SecureStorageService,
-    private authService: AuthService
-  ) {}
+    private authService: AuthService,
+    private dataUtil: DataUtil
+  ) {
+    this.dataUtil.currentUser$.subscribe((user) => (this.currentUser = user));
+  }
 
   calculatePoint(word: string) {
     return this.http
@@ -52,12 +56,10 @@ export class PointService {
     startWord?: string | null,
     endWord?: string | null,
     startPoint?: number | null,
-    endPoint?: number| null,
+    endPoint?: number | null,
     sortBy?: string | null,
-    sortDirection?: string | null,
-
+    sortDirection?: string | null
   ) {
-    
     return this.http
       .post<ApiResponse<VowelBonusScoreHistory[]>>(
         this.apiUrl + 'GetVowelBonusScoreHistoriesByFilter',
@@ -70,12 +72,67 @@ export class PointService {
           StartPoint: startPoint,
           EndPoint: endPoint,
           SortBy: sortBy,
-          SortDirection:sortDirection
+          SortDirection: sortDirection,
         }
       )
       .pipe(
         map((result: ApiResponse<VowelBonusScoreHistory[]>) => {
           return result;
+        }),
+        catchError((error: HttpErrorResponse) => {
+          return throwError(() => error);
+        })
+      );
+  }
+
+  updateHistory(historyId: number, word: string) {
+    return this.http
+      .patch<ApiResponse<VowelBonusScoreHistory>>(
+        this.apiUrl + 'UpdateVowelBonusScoreHistory',
+        {
+          VowelBonusScoreHistoryId: historyId,
+          Word: word,
+        }
+      )
+      .pipe(
+        map((result: ApiResponse<VowelBonusScoreHistory>) => {
+          if (result?.succeeded && result?.result) {
+          }
+
+          return result;
+        }),
+        catchError((error: HttpErrorResponse) => {
+          return throwError(() => error);
+        })
+      );
+  }
+
+  deleteHistory(historyId: number) {
+    return this.http
+      .delete<ApiResponse<boolean>>(
+        this.apiUrl + 'DeleteVowelBonusScoreHistory' + '?Id=' + historyId
+      )
+      .pipe(
+        map((result: ApiResponse<boolean>) => {
+          return result;
+        }),
+        catchError((error: HttpErrorResponse) => {
+          return throwError(() => error);
+        })
+      );
+  }
+
+  getTotalScore() {
+    return this.http
+      .get<ApiResponse<number>>(
+        this.apiUrl +
+          'GetVowelBonusTotalScoreHistory' +
+          '?Id=' +
+          this.authService.userLoggedIn?.userId,
+      )
+      .pipe(
+        map((result: ApiResponse<number>) => {
+         return result;
         }),
         catchError((error: HttpErrorResponse) => {
           return throwError(() => error);

@@ -28,5 +28,23 @@ namespace VowelBonus.API.Controllers.v1
         {
             return await _sender.Send(new GetVowelBonusScoreHistoriesByFilterQuery(args));
         }
+
+        [HttpPatch("UpdateVowelBonusScoreHistory", Name = "UpdateVowelBonusScoreHistory")]
+        public async Task<Response<VowelBonusScoreHistoryDto>> UpdateVowelBonusScoreHistory([FromBody] VowelBonusScoreHistoryUpdateDto args)
+        {
+            return await _sender.Send(new UpdateVowelBonusScoreHistoryCommand(args));
+        }
+
+        [HttpDelete("DeleteVowelBonusScoreHistory", Name = "DeleteVowelBonusScoreHistory")]
+        public async Task<Response<bool>> DeleteVowelBonusScoreHistory([FromQuery] int Id)
+        {
+            return await _sender.Send(new DeleteVowelBonusScoreHistoryCommand(Id));
+        }
+
+        [HttpGet("GetVowelBonusTotalScoreHistory", Name = "GetVowelBonusTotalScoreHistory")]
+        public async Task<Response<int>> GetVowelBonusTotalScoreHistory([FromQuery] int Id)
+        {
+            return await _sender.Send(new GetVowelBonusTotalScoreHistoriesByUserIdQuery(Id));
+        }
     }
 }   

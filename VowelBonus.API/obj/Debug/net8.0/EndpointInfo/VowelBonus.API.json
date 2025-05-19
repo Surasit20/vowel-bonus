@@ -402,6 +402,135 @@
         }
       }
     },
+    "/api/v1/VowelBonusScoreHistories/UpdateVowelBonusScoreHistory": {
+      "patch": {
+        "tags": [
+          "VowelBonusScoreHistories"
+        ],
+        "operationId": "UpdateVowelBonusScoreHistory",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/VowelBonusScoreHistoryUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/VowelBonusScoreHistories/DeleteVowelBonusScoreHistory": {
+      "delete": {
+        "tags": [
+          "VowelBonusScoreHistories"
+        ],
+        "operationId": "DeleteVowelBonusScoreHistory",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BooleanResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/VowelBonusScoreHistories/GetVowelBonusTotalScoreHistory": {
+      "get": {
+        "tags": [
+          "VowelBonusScoreHistories"
+        ],
+        "operationId": "GetVowelBonusTotalScoreHistory",
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Response"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Response"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Int32Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -507,6 +636,27 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "Int32Response": {
+        "type": "object",
+        "properties": {
+          "succeeded": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       },
       "LoginDto": {
         "type": "object",
@@ -624,6 +774,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "totalPoint": {
+            "type": "integer",
+            "format": "int32"
+          },
           "createdDate": {
             "type": "string",
             "format": "date-time",
@@ -648,6 +802,26 @@
               "$ref": "#/components/schemas/VowelBonusScoreHistoryDto"
             },
             "nullable": true
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "VowelBonusScoreHistoryDtoResponse": {
+        "type": "object",
+        "properties": {
+          "succeeded": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "result": {
+            "$ref": "#/components/schemas/VowelBonusScoreHistoryDto"
           },
           "totalRecord": {
             "type": "integer",
@@ -746,6 +920,20 @@
         "type": "object",
         "properties": {
           "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "word": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VowelBonusScoreHistoryUpdateDto": {
+        "type": "object",
+        "properties": {
+          "vowelBonusScoreHistoryId": {
             "type": "integer",
             "format": "int32"
           },

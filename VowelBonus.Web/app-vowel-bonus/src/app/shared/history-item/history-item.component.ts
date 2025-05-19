@@ -6,6 +6,7 @@ import { PointService } from '@vowel-bonus-app/core/services/point.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 import { Subject } from 'rxjs';
 import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
+import { User } from '@vowel-bonus-app/core/models/user.model';
 
 @Component({
   selector: 'app-history-item',
@@ -18,8 +19,11 @@ export class HistoryItemComponent {
 
   destroy$ = new Subject<void>();
   historyItem?: VowelBonusScoreHistory[];
+  currentUser: User | null = null;
 
-  constructor(private pointService: PointService, private dataUtil: DataUtil) {}
+  constructor(private pointService: PointService, private dataUtil: DataUtil) {
+    this.dataUtil.currentUser$.subscribe((user) => (this.currentUser = user));
+  }
 
   currentPage = 1;
   pageSize = 5;
@@ -182,12 +186,34 @@ export class HistoryItemComponent {
   }
 
   onEdit(item: VowelBonusScoreHistory): void {
-    console.log(item)
+    this.pointService
+      .updateHistory(item.vowelBonusScoreHistoryId, item.word)
+      .subscribe({
+        next: (res) => {
+          if (res.succeeded && res.result) {
+          }
+        },
+        error: (error) => {
+          this.isLoading = false;
+        },
+      });
   }
 
   onDelete(item: VowelBonusScoreHistory): void {
-    if (confirm(`Are you sure to delete "${item.word}"?`)) {
-    }
+    this.pointService.deleteHistory(item.vowelBonusScoreHistoryId).subscribe({
+      next: (res) => {
+        if (res.succeeded && res.result) {
+          this.getTotalScore();
+          this.updatePagedItems();
+        }
+      },
+      error: (error) => {
+        this.isLoading = false;
+        console.log(error);
+      },
+    });
+
+
   }
 
   startEdit(item: VowelBonusScoreHistory): void {
@@ -196,8 +222,22 @@ export class HistoryItemComponent {
   }
 
   saveEdit(item: VowelBonusScoreHistory): void {
-      console.log(item)
-    item.word = item.editingWord;
+    this.pointService
+      .updateHistory(item.vowelBonusScoreHistoryId, item.editingWord)
+      .subscribe({
+        next: (res) => {
+          if (res.succeeded && res.result) {
+            item.word = res.result.word;
+            item.point = res.result.point;
+            this.getTotalScore();
+          }
+        },
+        error: (error) => {
+          this.isLoading = false;
+          console.log(error);
+        },
+      });
+
     item.isEditing = false;
   }
 
@@ -205,6 +245,21 @@ export class HistoryItemComponent {
     item.isEditing = false;
   }
 
+  getTotalScore(){
+    this.pointService.getTotalScore().subscribe({
+      next: (res) => {
+      
+        if (res?.succeeded && res.result && this.currentUser) {
+          this.currentUser.totalPoint = res.result;
+          this.dataUtil.currentUser$.next(this.currentUser);
+        }
+      },
+      error: (error) => {
+        this.isLoading = false;
+        console.log(error);
+      },
+    });
+  }
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

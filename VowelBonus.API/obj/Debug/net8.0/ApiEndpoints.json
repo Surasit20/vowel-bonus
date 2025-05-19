@@ -211,6 +211,33 @@
   },
   {
     "ContainingType": "VowelBonus.API.Controllers.v1.VowelBonusScoreHistoriesController",
+    "Method": "DeleteVowelBonusScoreHistory",
+    "RelativePath": "api/v1/VowelBonusScoreHistories/DeleteVowelBonusScoreHistory",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VowelBonus.Shared.Common.Models.Response\u00601[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "DeleteVowelBonusScoreHistory"
+  },
+  {
+    "ContainingType": "VowelBonus.API.Controllers.v1.VowelBonusScoreHistoriesController",
     "Method": "GetVowelBonusScoreHistoriesByFilter",
     "RelativePath": "api/v1/VowelBonusScoreHistories/GetVowelBonusScoreHistoriesByFilter",
     "HttpMethod": "POST",
@@ -235,6 +262,60 @@
       }
     ],
     "EndpointName": "GetVowelBonusScoreHistoriesByFilter"
+  },
+  {
+    "ContainingType": "VowelBonus.API.Controllers.v1.VowelBonusScoreHistoriesController",
+    "Method": "GetVowelBonusTotalScoreHistory",
+    "RelativePath": "api/v1/VowelBonusScoreHistories/GetVowelBonusTotalScoreHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VowelBonus.Shared.Common.Models.Response\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetVowelBonusTotalScoreHistory"
+  },
+  {
+    "ContainingType": "VowelBonus.API.Controllers.v1.VowelBonusScoreHistoriesController",
+    "Method": "UpdateVowelBonusScoreHistory",
+    "RelativePath": "api/v1/VowelBonusScoreHistories/UpdateVowelBonusScoreHistory",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "args",
+        "Type": "VowelBonus.Shared.DTOs.VowelBonusScoreHistoryUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "VowelBonus.Shared.Common.Models.Response\u00601[[VowelBonus.Shared.DTOs.VowelBonusScoreHistoryDto, VowelBonus.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "UpdateVowelBonusScoreHistory"
   },
   {
     "ContainingType": "VowelBonus.API.Controllers.WeatherForecastController",

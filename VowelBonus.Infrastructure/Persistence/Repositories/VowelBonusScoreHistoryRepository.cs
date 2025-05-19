@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using VowelBonus.Shared.DTOs;
 using System.Linq.Dynamic.Core;
 using VowelBonus.Domain.Entities;
+using VowelBonus.Shared.Common.Models;
 
 namespace VowelBonus.Domain.Persistence.Repositories
 {
@@ -35,10 +36,25 @@ namespace VowelBonus.Domain.Persistence.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(VowelBonusScoreHistory history)
+        public async Task<VowelBonusScoreHistory> UpdateAsync(VowelBonusScoreHistory history)
         {
-            _context.VowelBonusScoreHistory.Update(history);
-            await _context.SaveChangesAsync();
+
+            var historyExist = await _context.VowelBonusScoreHistory.FirstOrDefaultAsync(f=> f.VowelBonusScoreHistoryId == history.VowelBonusScoreHistoryId && 
+                                                                                             f.IsDelete == false && 
+                                                                                             f.IsActive == true);
+
+            if (historyExist != null)
+            {
+                historyExist.Point = history.Point;
+                historyExist.Word = history.Word;
+                _context.VowelBonusScoreHistory.Update(historyExist);
+                await _context.SaveChangesAsync();
+                return historyExist;
+            }
+            else
+            {
+                throw new Exception(BaseConst.NOT_FOUND);
+            }
         }
 
         public async Task DeleteAsync(int id)
@@ -48,6 +64,10 @@ namespace VowelBonus.Domain.Persistence.Repositories
             {
                 _context.VowelBonusScoreHistory.Remove(history);
                 await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception(BaseConst.NOT_FOUND);
             }
         }
 

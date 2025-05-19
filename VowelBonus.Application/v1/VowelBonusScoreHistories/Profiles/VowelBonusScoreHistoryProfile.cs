@@ -6,5 +6,6 @@ public class VowelBonusScoreHistoryProfile : Profile
     {
         CreateMap<VowelBonusScoreHistory, VowelBonusScoreHistorySaveDto>().ReverseMap();
         CreateMap<VowelBonusScoreHistory, VowelBonusScoreHistoryDto>().ReverseMap();
+        CreateMap<VowelBonusScoreHistory, VowelBonusScoreHistoryUpdateDto>().ReverseMap();
     }
 }

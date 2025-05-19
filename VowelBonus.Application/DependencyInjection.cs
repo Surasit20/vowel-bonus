@@ -3,6 +3,7 @@ using System.Reflection;
 using VowelBonus.Application.v1.Users.Profiles;
 using VowelBonus.Application.v1.VowelBonusScoreHistories.Profiles;
 using VowelBonus.Application.v1.Auth.Profiles;
+using VowelBonus.Application.Common;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -21,6 +22,8 @@ public static class DependencyInjection
         {
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
         });
+
+        services.AddScoped<ICalculatePointService, CalculatePointService>();
         return services;
     }
 }
