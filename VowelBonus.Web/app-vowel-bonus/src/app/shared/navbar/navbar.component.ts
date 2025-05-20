@@ -63,8 +63,9 @@ export class NavbarComponent {
         .subscribe({
           next: (res) => {
             if (res.succeeded && res.result && this.currentUser) {
-              this.currentUser = res.result;
+              this.currentUser.userName = res.result.userName;
               this.dataUtil.currentUser$.next(this.currentUser);
+              this.toastComponent.showToast(res.message, 'success');
             }
             else{
               this.toastComponent.showToast(res.message, 'error');

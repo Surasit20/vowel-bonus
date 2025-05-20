@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\vowel-bonus\\vowel-bonus\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\vowelbonusscorehistories\\commands\\createvowelbonusscorehistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\vowelbonusscorehistories\\commands\\createvowelbonusscorehistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\common\\baseservice.calculatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\common\\baseservice.calculatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|solutionrelative:vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\vowelbonusscorehistories\\queries\\getvowelbonusscorehistoriesbyfilterquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\vowelbonusscorehistories\\queries\\getvowelbonusscorehistoriesbyfilterquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\vowelbonusscorehistories\\queries\\getvowelbonustotalscorehistoriesbyuseridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\vowelbonusscorehistories\\queries\\getvowelbonustotalscorehistoriesbyuseridquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9868A5EA-EA34-432E-8AA5-574A202F0F5C}|VowelBonus.API\\VowelBonus.API.csproj|solutionrelative:vowelbonus.api\\controllers\\v1\\vowelbonusscorehistoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\vowelbonusscorehistories\\commands\\deletevowelbonusscorehistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\v1\\users\\commands\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\v1\\users\\commands\\deleteusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|solutionrelative:vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.application\\common\\baseservice.calculatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80B19A8E-6ECF-49C0-981B-6F45AD6847D3}|VowelBonus.Application\\VowelBonus.Application.csproj|solutionrelative:vowelbonus.application\\common\\baseservice.calculatepoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38FCAD73-5EC5-4FDF-8A83-9391D58A77B6}|VowelBonus.Shared\\VowelBonus.Shared.csproj|d:\\vowel-bonus\\vowel-bonus\\vowelbonus.shared\\dtos\\vowelbonusscorehistory\\vowelbonusscorehistoryupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -80,7 +84,7 @@
         },
         {
           "DockedHeight": 32,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 19,
           "Children": [
             {
               "$type": "Bookmark",
@@ -160,7 +164,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "CreateVowelBonusScoreHistoryCommand.cs",
+              "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "RelativeToolTip": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\CreateVowelBonusScoreHistoryCommand.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T15:22:33.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "GetVowelBonusTotalScoreHistoriesByUserIdQuery.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusTotalScoreHistoriesByUserIdQuery.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusTotalScoreHistoriesByUserIdQuery.cs",
@@ -172,20 +189,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "GetVowelBonusScoreHistoriesByFilterQuery.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusScoreHistoriesByFilterQuery.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusScoreHistoriesByFilterQuery.cs",
               "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusScoreHistoriesByFilterQuery.cs",
               "RelativeToolTip": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Queries\\GetVowelBonusScoreHistoriesByFilterQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T15:22:42.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\UsersController.cs",
               "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\UsersController.cs",
@@ -197,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "VowelBonusScoreHistoryRepository.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
               "RelativeDocumentMoniker": "VowelBonus.Infrastructure\\Persistence\\Repositories\\VowelBonusScoreHistoryRepository.cs",
@@ -209,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "IVowelBonusScoreHistoryRepository.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
               "RelativeDocumentMoniker": "VowelBonus.Domain\\Interfaces\\IVowelBonusScoreHistoryRepository.cs",
@@ -221,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "DeleteVowelBonusScoreHistoryCommand.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\DeleteVowelBonusScoreHistoryCommand.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\DeleteVowelBonusScoreHistoryCommand.cs",
@@ -233,19 +250,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "VowelBonusScoreHistoryDto.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
               "RelativeDocumentMoniker": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
               "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
               "RelativeToolTip": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:18:06.579Z"
+              "WhenOpened": "2025-05-19T15:18:06.579Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "DeleteUserCommand.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\Users\\Commands\\DeleteUserCommand.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\Users\\Commands\\DeleteUserCommand.cs",
@@ -257,19 +275,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VowelBonusScoreHistoriesController.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
               "RelativeDocumentMoniker": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
-              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
-              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC4AAABXAAAAAAAAAA==",
+              "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs*",
+              "RelativeToolTip": "VowelBonus.API\\Controllers\\v1\\VowelBonusScoreHistoriesController.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T15:12:58.333Z"
+              "WhenOpened": "2025-05-19T15:12:58.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "UpdateVowelBonusScoreHistoryCommand.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\UpdateVowelBonusScoreHistoryCommand.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\v1\\VowelBonusScoreHistories\\Commands\\UpdateVowelBonusScoreHistoryCommand.cs",
@@ -281,7 +300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "VowelBonusScoreHistoryUpdateDto.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryUpdateDto.cs",
               "RelativeDocumentMoniker": "VowelBonus.Shared\\DTOs\\VowelBonusScoreHistory\\VowelBonusScoreHistoryUpdateDto.cs",
@@ -293,15 +312,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "BaseService.CalculatePoint.cs",
               "DocumentMoniker": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\Common\\BaseService.CalculatePoint.cs",
               "RelativeDocumentMoniker": "VowelBonus.Application\\Common\\BaseService.CalculatePoint.cs",
               "ToolTip": "D:\\vowel-bonus\\vowel-bonus\\VowelBonus.Application\\Common\\BaseService.CalculatePoint.cs",
               "RelativeToolTip": "VowelBonus.Application\\Common\\BaseService.CalculatePoint.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T14:55:55.104Z"
+              "WhenOpened": "2025-05-19T14:55:55.104Z",
+              "EditorCaption": ""
             }
           ]
         }
