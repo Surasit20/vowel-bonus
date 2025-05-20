@@ -335,17 +335,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/VowelBonusScoreHistoryResponseDtoResponse"
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VowelBonusScoreHistoryResponseDtoResponse"
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VowelBonusScoreHistoryResponseDtoResponse"
+                  "$ref": "#/components/schemas/VowelBonusScoreHistoryDtoResponse"
                 }
               }
             }
@@ -875,43 +875,6 @@
             "type": "integer",
             "format": "int32",
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "VowelBonusScoreHistoryResponseDto": {
-        "type": "object",
-        "properties": {
-          "totalPoint": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "vowelBonusScoreHistories": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/VowelBonusScoreHistoryDto"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "VowelBonusScoreHistoryResponseDtoResponse": {
-        "type": "object",
-        "properties": {
-          "succeeded": {
-            "type": "boolean"
-          },
-          "message": {
-            "type": "string",
-            "nullable": true
-          },
-          "result": {
-            "$ref": "#/components/schemas/VowelBonusScoreHistoryResponseDto"
-          },
-          "totalRecord": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

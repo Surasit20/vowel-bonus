@@ -7,19 +7,30 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 import { Subject } from 'rxjs';
 import { FilterDialogComponent } from '../filter-dialog/filter-dialog.component';
 import { User } from '@vowel-bonus-app/core/models/user.model';
+import { ToastComponent } from '../toast/toast.component';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-history-item',
-  imports: [CommonModule, FormsModule, FilterDialogComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    FilterDialogComponent,
+    ToastComponent,
+    ConfirmDialogComponent,
+  ],
   templateUrl: './history-item.component.html',
   styleUrl: './history-item.component.css',
 })
 export class HistoryItemComponent {
   @ViewChild(FilterDialogComponent) filterDialog!: FilterDialogComponent;
-
+  @ViewChild('toast') toastComponent!: ToastComponent;
+  @ViewChild('confirmDeleteDialog')
+  confirmDeleteComponent!: ConfirmDialogComponent;
   destroy$ = new Subject<void>();
   historyItem?: VowelBonusScoreHistory[];
   currentUser: User | null = null;
+  contentConfirm: string = 'Are you sure you want to delete item!!!';
 
   constructor(private pointService: PointService, private dataUtil: DataUtil) {
     this.dataUtil.currentUser$.subscribe((user) => (this.currentUser = user));
@@ -57,6 +68,7 @@ export class HistoryItemComponent {
     this.updatePagedItems();
   }
 
+  //-------------------------> Paging  สามารถแยกเป็น Component ได้ภายหลัง
   async updatePagedItems() {
     //this.isLoading = true; <---- ยังไม่ได้ทำ Loading
 
@@ -78,6 +90,8 @@ export class HistoryItemComponent {
             this.totalPages = Math.ceil(this.totalItems / this.pageSize);
             this.historyItem = res.result;
             this.isLoading = false;
+          } else {
+            this.toastComponent.showToast(res.message, 'error');
           }
         },
         error: (error) => {
@@ -125,6 +139,7 @@ export class HistoryItemComponent {
     this.visiblePages = pages;
   }
 
+  //------------------------->Filter สามารถแยกเป็น Component ได้ภายหลัง
   shiftPageGroup(direction: number): void {
     const newStart = this.pagerStart + direction * this.maxVisible;
     if (newStart < 1 || newStart > this.totalPages) return;
@@ -161,6 +176,8 @@ export class HistoryItemComponent {
             this.totalPages = Math.ceil(this.totalItems / this.pageSize);
             this.historyItem = res.result;
             this.isLoading = false;
+          } else {
+            this.toastComponent.showToast(res.message, 'error');
           }
         },
         error: (error) => {
@@ -185,26 +202,19 @@ export class HistoryItemComponent {
     };
   }
 
-  onEdit(item: VowelBonusScoreHistory): void {
-    this.pointService
-      .updateHistory(item.vowelBonusScoreHistoryId, item.word)
-      .subscribe({
-        next: (res) => {
-          if (res.succeeded && res.result) {
-          }
-        },
-        error: (error) => {
-          this.isLoading = false;
-        },
-      });
+  //------------------------->Edit and Delete
+  onDelete(item: VowelBonusScoreHistory): void {
+    this.confirmDeleteComponent.onOpenDialog(item);
   }
 
-  onDelete(item: VowelBonusScoreHistory): void {
+  handleConfirmDelete(item: any) {
     this.pointService.deleteHistory(item.vowelBonusScoreHistoryId).subscribe({
       next: (res) => {
         if (res.succeeded && res.result) {
-          this.getTotalScore();
           this.updatePagedItems();
+          this.pointService.getTotalScore();
+        } else {
+          this.toastComponent.showToast(res.message, 'error');
         }
       },
       error: (error) => {
@@ -213,7 +223,11 @@ export class HistoryItemComponent {
       },
     });
 
+    this.confirmDeleteComponent.onCloseDialog();
+  }
 
+  handleDeleteCancel() {
+    this.confirmDeleteComponent.onCloseDialog();
   }
 
   startEdit(item: VowelBonusScoreHistory): void {
@@ -229,12 +243,15 @@ export class HistoryItemComponent {
           if (res.succeeded && res.result) {
             item.word = res.result.word;
             item.point = res.result.point;
-            this.getTotalScore();
+            this.pointService.getTotalScore();
+          } else {
+            this.toastComponent.showToast(res.message, 'error');
           }
         },
         error: (error) => {
           this.isLoading = false;
           console.log(error);
+          this.toastComponent.showToast(error, 'error');
         },
       });
 
@@ -245,21 +262,6 @@ export class HistoryItemComponent {
     item.isEditing = false;
   }
 
-  getTotalScore(){
-    this.pointService.getTotalScore().subscribe({
-      next: (res) => {
-      
-        if (res?.succeeded && res.result && this.currentUser) {
-          this.currentUser.totalPoint = res.result;
-          this.dataUtil.currentUser$.next(this.currentUser);
-        }
-      },
-      error: (error) => {
-        this.isLoading = false;
-        console.log(error);
-      },
-    });
-  }
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();

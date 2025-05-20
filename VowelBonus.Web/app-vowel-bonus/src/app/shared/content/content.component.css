@@ -11,7 +11,44 @@
   max-width: 500px;
   margin: 0 auto;
   height: 65vh; 
+  position: relative;
+
+
 }
+
+.form-header {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.history-button {
+  background-color: #4a90e2;      
+  color: white;                    
+  border: none;
+  border-radius: 8px;              
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.history-button:hover {
+  background-color: #357ABD;       
+  transform: translateY(-1px);      
+}
+
+.history-button:active {
+  transform: translateY(1px);        
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 
 .word-form label {
   font-size: 24px;

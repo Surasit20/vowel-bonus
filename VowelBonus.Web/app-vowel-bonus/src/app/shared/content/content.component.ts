@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { User } from '@vowel-bonus-app/core/models/user.model';
 import { PointService } from '@vowel-bonus-app/core/services/point.service';
 import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 import { Subject, takeUntil } from 'rxjs';
+import { ListDialogComponent } from '../list-dialog/list-dialog.component';
+import { HistoryItemComponent } from '../history-item/history-item.component';
+import { CommonModule } from '@angular/common';
+import { ToastComponent } from "../toast/toast.component";
 
 @Component({
   selector: 'app-content',
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    ListDialogComponent,
+    HistoryItemComponent,
+    CommonModule,
+    ToastComponent
+],
   templateUrl: './content.component.html',
   styleUrl: './content.component.css',
 })
 export class ContentComponent {
+ @ViewChild(ListDialogComponent) listDialog!: ListDialogComponent;
+@ViewChild('toast') toastComponent!: ToastComponent;
+
   destroy$ = new Subject<void>();
   word!: string;
   currentUser?: User;
@@ -24,12 +37,10 @@ export class ContentComponent {
   onSend() {
     this.pointService.calculatePoint(this.word).subscribe({
       next: (res) => {
-        if (res.succeeded && res.result && this.currentUser) {
-          this.currentUser.totalPoint = res.result.totalPoint;
-          this.currentUser.vowelBonusScoreHistories =
-            res.result.vowelBonusScoreHistories;
-          this.dataUtil.currentUser$.next(this.currentUser);
-          this.word = '';
+        if (res.succeeded && res.result) {
+          this.clearInput();
+          this.pointService.getTotalScore();
+          this.toastComponent.showToast(`The word ‘${res.result.word}’ scored ${res.result.point} points.`, 'success');
         }
       },
       error: (error) => {
@@ -43,12 +54,15 @@ export class ContentComponent {
   }
 
   allowOnlyEnglishLetters(event: KeyboardEvent) {
-    console.log(event.key);
     const pattern = /^[a-zA-Z]+$/;
     const inputChar = event.key;
     if (!pattern.test(inputChar)) {
       event.preventDefault();
     }
+  }
+
+  handleOpenHistoryDialog() {
+    this.listDialog.onOpenDialog();
   }
 
   ngOnDestroy(): void {

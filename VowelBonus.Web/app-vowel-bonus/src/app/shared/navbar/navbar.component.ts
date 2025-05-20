@@ -6,10 +6,12 @@ import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.compone
 import { Subject, takeUntil } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '@vowel-bonus-app/core/services/user.service';
+import { CommonModule } from '@angular/common';
+import { ToastComponent } from "../toast/toast.component";
 
 @Component({
   selector: 'app-navbar',
-  imports: [ConfirmDialogComponent, FormsModule],
+  imports: [ConfirmDialogComponent, FormsModule, CommonModule, ToastComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
@@ -22,7 +24,7 @@ export class NavbarComponent {
   editedUserName = '';
 
   @ViewChild(ConfirmDialogComponent) confirmDialog!: ConfirmDialogComponent;
-
+  @ViewChild('toast') toastComponent!: ToastComponent;
   constructor(
     private dataUtil: DataUtil,
     private authService: AuthService,
@@ -63,6 +65,9 @@ export class NavbarComponent {
             if (res.succeeded && res.result && this.currentUser) {
               this.currentUser = res.result;
               this.dataUtil.currentUser$.next(this.currentUser);
+            }
+            else{
+              this.toastComponent.showToast(res.message, 'error');
             }
           },
           error: (error) => {

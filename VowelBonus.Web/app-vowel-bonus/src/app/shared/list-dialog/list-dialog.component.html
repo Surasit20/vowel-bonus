@@ -1,0 +1,11 @@
+@if(showDialog){
+<div class="custom-dialog-backdrop">
+  <div class="custom-dialog">
+    <h2 class="dialog-title">{{headerText}}</h2>
+     <ng-content></ng-content>
+    <div class="dialog-actions">
+      <button (click)="showDialog = false">Close</button>
+    </div>
+  </div>
+</div>
+}

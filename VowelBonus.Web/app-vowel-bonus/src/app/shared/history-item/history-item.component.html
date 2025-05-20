@@ -1,82 +1,80 @@
-<div class="column right-column">
-  <!-- <h2 class="history-title">Latest 20 Records</h2> -->
+<div class="filter-button-container">
   <button (click)="filterDialog.onOpenDialog()" class="filter-toggle-btn">
     Filter & Sort
   </button>
-
-  <!-- History Item-->
-  <ul class="history-list">
-    @if (isLoading) {
-    @for (i of [1,2,3,4,5]; track i) {
-    <li class="history-item skeleton">
-      <div class="word skeleton-box"></div>
-      <div class="point skeleton-box short"></div>
-      <div class="date skeleton-box medium"></div>
-    </li>
-    }
-    } @else {
-    @for (item of historyItem; track item.createdDate) {
-    <li class="history-item">
-      <div class="info">
-        @if (item.isEditing) {
-        <input [(ngModel)]="item.editingWord" class="edit-input" placeholder="Edit word..." />
-        } @else {
-        <div class="word">{{ item.word }}</div>
-        }
-
-        <div class="point">Point: {{ item.point }}</div>
-        <div class="date">Created Date Time: {{ item.createdDate | date: 'dd/MM/yyyy HH:mm' }}</div>
-      </div>
-
-      <div class="actions">
-        @if (item.isEditing) {
-        <button class="btn save-btn" (click)="saveEdit(item)">💾 Save</button>
-        <button class="btn cancel-btn" (click)="cancelEdit(item)">✖ Cancel</button>
-
-        } @else {
-        <button class="btn edit-btn" (click)="startEdit(item)">✏️ Edit</button>
-        <button class="btn delete-btn" (click)="onDelete(item)">🗑️ Delete</button>
-        }
-      </div>
-    </li>
-    }
-    }
-  </ul>
-
-<!-- Paging -->
-  <div class="pagination-controls">
-    <label>
-      Page Size:
-      <select [(ngModel)]="pageSize" (change)="onPageChange(1)">
-        @for (size of pageSizes; track size) {
-        <option [value]="size">{{ size }}</option>
-        }
-      </select>
-    </label>
-
-    <button (click)="onPageChange(1)" [disabled]="currentPage === 1">«</button>
-    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">‹</button>
-
-    @if(pagerStart > 1){
-    <button (click)="shiftPageGroup(-1)">...</button>
-    }
-
-    @for (page of visiblePages; track page) {
-    <button (click)="onPageChange(page)" [class.active]="page === currentPage">
-      {{ page }}
-    </button>
-    }
-
-    @if(pagerEnd < totalPages){ <button (click)="shiftPageGroup(1)">...</button>
+</div>
+<!-- History Item-->
+<ul class="history-list">
+  @if (isLoading) {
+  @for (i of [1,2,3,4,5]; track i) {
+  <li class="history-item skeleton">
+    <div class="word skeleton-box"></div>
+    <div class="point skeleton-box short"></div>
+    <div class="date skeleton-box medium"></div>
+  </li>
+  }
+  } @else {
+  @for (item of historyItem; track item.createdDate) {
+  <li class="history-item">
+    <div class="info">
+      @if (item.isEditing) {
+      <input [(ngModel)]="item.editingWord" class="edit-input" placeholder="Edit word..." />
+      } @else {
+      <div class="word">{{ item.word }}</div>
       }
 
-      <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">›</button>
-      <button (click)="onPageChange(totalPages)" [disabled]="currentPage === totalPages">»</button>
+      <div class="point">Point: {{ item.point }}</div>
+      <div class="date">Created Date Time: {{ item.createdDate | date: 'dd/MM/yyyy HH:mm' }}</div>
+    </div>
 
-      <span class="total-info">
-        Page {{ currentPage }} of {{ totalPages }} | Total: {{ totalItems }}
-      </span>
-  </div>
+    <div class="actions">
+      @if (item.isEditing) {
+      <button class="btn save-btn" (click)="saveEdit(item)">💾 Save</button>
+      <button class="btn cancel-btn" (click)="cancelEdit(item)">✖ Cancel</button>
+
+      } @else {
+      <button class="btn edit-btn" (click)="startEdit(item)">✏️ Edit</button>
+      <button class="btn delete-btn" (click)="onDelete(item)">🗑️ Delete</button>
+      }
+    </div>
+  </li>
+  }
+  }
+</ul>
+
+<!-- Paging -->
+<div class="pagination-controls">
+  <label>
+    Page Size:
+    <select [(ngModel)]="pageSize" (change)="onPageChange(1)">
+      @for (size of pageSizes; track size) {
+      <option [value]="size">{{ size }}</option>
+      }
+    </select>
+  </label>
+
+  <button (click)="onPageChange(1)" [disabled]="currentPage === 1">«</button>
+  <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">‹</button>
+
+  @if(pagerStart > 1){
+  <button (click)="shiftPageGroup(-1)">...</button>
+  }
+
+  @for (page of visiblePages; track page) {
+  <button (click)="onPageChange(page)" [class.active]="page === currentPage">
+    {{ page }}
+  </button>
+  }
+
+  @if(pagerEnd < totalPages){ <button (click)="shiftPageGroup(1)">...</button>
+    }
+
+    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">›</button>
+    <button (click)="onPageChange(totalPages)" [disabled]="currentPage === totalPages">»</button>
+
+    <span class="total-info">
+      Page {{ currentPage }} of {{ totalPages }} | Total: {{ totalItems }}
+    </span>
 </div>
 
 
@@ -84,12 +82,12 @@
 <app-filter-dialog (applied)="applyFilters()" (reseted)="resetFilters()">
   <div class="filter-dialog">
     <label>
-      Start Word :
+      Start Word:
       <input [(ngModel)]="filters.startWord" placeholder="e.g. A" />
     </label>
 
     <label>
-      End Word :
+      End Word:
       <input [(ngModel)]="filters.endWord" placeholder="e.g. Z" />
     </label>
 
@@ -121,3 +119,12 @@
     </label>
   </div>
 </app-filter-dialog>
+
+
+<app-toast #toast></app-toast>
+
+<app-confirm-dialog #confirmDeleteDialog
+  [content]="contentConfirm" 
+  (confirmedWithData)="handleConfirmDelete($event)"
+  (cancelled)="handleDeleteCancel()">
+</app-confirm-dialog>

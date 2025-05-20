@@ -30,7 +30,7 @@ export class PointService {
 
   calculatePoint(word: string) {
     return this.http
-      .post<ApiResponse<VowelBonusScoreResponse>>(
+      .post<ApiResponse<VowelBonusScoreHistory>>(
         this.apiUrl + 'CreateVowelBonusScoreHistories',
         {
           Word: word,
@@ -38,10 +38,7 @@ export class PointService {
         }
       )
       .pipe(
-        map((result: ApiResponse<VowelBonusScoreResponse>) => {
-          if (result?.succeeded && result?.result) {
-          }
-
+        map((result: ApiResponse<VowelBonusScoreHistory>) => {
           return result;
         }),
         catchError((error: HttpErrorResponse) => {
@@ -128,15 +125,26 @@ export class PointService {
         this.apiUrl +
           'GetVowelBonusTotalScoreHistory' +
           '?Id=' +
-          this.authService.userLoggedIn?.userId,
+          this.authService.userLoggedIn?.userId
       )
       .pipe(
         map((result: ApiResponse<number>) => {
-         return result;
+          return result;
         }),
         catchError((error: HttpErrorResponse) => {
           return throwError(() => error);
         })
-      );
+      )
+      .subscribe({
+        next: (res) => {
+          if (res?.succeeded && res.result && this.currentUser) {
+            this.currentUser.totalPoint = res.result;
+            this.dataUtil.currentUser$.next(this.currentUser);
+          }
+        },
+        error: (error) => {
+          console.log(error);
+        },
+      });
   }
 }

@@ -7,7 +7,7 @@ import { DataUtil } from '@vowel-bonus-app/core/utils/data.util';
 
 @Component({
   selector: 'app-home',
-  imports: [NavbarComponent, SidebarComponent, ContentComponent],
+  imports: [NavbarComponent, ContentComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

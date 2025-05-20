@@ -1,4 +1,9 @@
+  
   <form (ngSubmit)="onSend()" #wordForm="ngForm" class="word-form">
+  <div class="form-header">
+    <button type="button" class="history-button" (click)="handleOpenHistoryDialog()">history score</button>
+  </div>
+
     <label for="word">Enter Your Word</label>
     <input 
       type="text" 
@@ -18,3 +23,12 @@
       Clear
     </button>
   </form>
+
+
+<app-list-dialog
+headerText="History Score">
+<app-history-item > </app-history-item>
+</app-list-dialog>
+
+<app-toast #toast></app-toast>
+

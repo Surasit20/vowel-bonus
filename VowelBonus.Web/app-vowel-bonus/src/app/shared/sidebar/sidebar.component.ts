@@ -7,7 +7,7 @@ import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [HistoryItemComponent,CommonModule],
+  imports: [CommonModule],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })

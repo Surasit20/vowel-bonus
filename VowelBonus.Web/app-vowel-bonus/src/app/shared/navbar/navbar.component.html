@@ -23,7 +23,10 @@
   </div>
 
   <div class="navbar-right">
-    <p>{{currentUser?.totalPoint}}</p>
+    <div class="user-summary">
+      <p class="total-point">Total Point: <span>{{ currentUser?.totalPoint }}</span></p>
+      <p class="last-login">Last Login: <span>{{ currentUser?.lastLoginDate | date:'dd/MM/yyyy HH:mm' }}</span></p>
+    </div>
     <button type="button" class="logout-button" (click)="confirmLogout()">Logout</button>
   </div>
 </nav>
@@ -33,3 +36,5 @@
   (confirmed)="handleConfirm()"
   (cancelled)="handleCancel()">
 </app-confirm-dialog>
+
+<app-toast #toast></app-toast>
